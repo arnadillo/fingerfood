@@ -68,11 +68,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Drinks.xaml.cs">
+      <DependentUpon>Drinks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sides.xaml.cs">
+      <DependentUpon>Sides.xaml</DependentUpon>
+    </Compile>
     <Page Include="Burgers.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Desserts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Drinks.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -94,6 +104,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Sides.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -159,6 +173,22 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="blueberry muffin.jpg" />
+    <Resource Include="fries.jpg" />
+    <Resource Include="hashbrown.jpg" />
+    <Resource Include="onion rings.jpg" />
+    <Resource Include="poutine.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="berry smooth.jpg" />
+    <Resource Include="boppity pop.jpg" />
+    <Resource Include="bottled-water.jpg" />
+    <Resource Include="caco calo.JPG" />
+    <Resource Include="choco milk.jpg" />
+    <Resource Include="edge haku latte.jpg" />
+    <Resource Include="pop mcgee.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

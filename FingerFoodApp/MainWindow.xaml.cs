@@ -29,6 +29,9 @@ namespace FingerFoodApp
             InitializeComponent();
             Burgers.Visibility = Visibility.Hidden;
             Desserts.Visibility = Visibility.Hidden;
+            Sides.Visibility = Visibility.Hidden;
+            Drinks.Visibility = Visibility.Hidden;
+
         }
 
         private void Burgers_Click(object sender, RoutedEventArgs e)
@@ -44,6 +47,22 @@ namespace FingerFoodApp
 
             MainMenu.Visibility = Visibility.Hidden;
             Desserts.Visibility = Visibility.Visible;
+
+        }
+
+        private void Sides_Click(object sender, RoutedEventArgs e)
+        {
+
+            MainMenu.Visibility = Visibility.Hidden;
+            Sides.Visibility = Visibility.Visible;
+
+        }
+
+        private void Drinks_Click(object sender, RoutedEventArgs e)
+        {
+
+            MainMenu.Visibility = Visibility.Hidden;
+            Drinks.Visibility = Visibility.Visible;
 
         }
 
