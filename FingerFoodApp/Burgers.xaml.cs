@@ -22,6 +22,7 @@ namespace FingerFoodApp
         public Burgers()
         {
             InitializeComponent();
+            // Arnold suks bick dalls xDDDDDD
         }
     }
 }
