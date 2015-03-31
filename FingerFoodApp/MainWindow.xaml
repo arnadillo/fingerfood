@@ -7,12 +7,14 @@
 
         <Canvas x:Name="MainMenu">
 
+            <Image Height="326" Canvas.Left="-5" Canvas.Top="164" Width="370" Source="exampleDinerTable2.jpg"/>
+
             <TextBlock HorizontalAlignment="Left" Margin="21,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="111" Width="323" FontSize="100" Foreground="Red" FontFamily="Freestyle Script"><Run Text="Finger "/><Run Text="Food"/></TextBlock>
-            <Image Margin="16,164,16,128" Source="mainMenuTable.png" Stretch="Fill"/>
-            <Button Content="Burgers" HorizontalAlignment="Left" Margin="135,242,0,0" VerticalAlignment="Top" Width="94" Height="38" FontSize="24" FontFamily="Gill Sans MT" Click="Burgers_Click"/>
-            <Button Content="Desserts" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="38" FontSize="24" FontFamily="Gill Sans MT" Click="Desserts_Click" Canvas.Left="250" Canvas.Top="328"/>
-            <Button Content="Sides" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="38" FontSize="24" FontFamily="Gill Sans MT" Click="Sides_Click" Canvas.Left="33" Canvas.Top="328"/>
-            <Button Content="Drinks" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="38" FontSize="24" FontFamily="Gill Sans MT" Click="Drinks_Click" Canvas.Left="135" Canvas.Top="422"/>
+            <Image Margin="16,164,16,128" Source="exampleDinerTable2.png" Stretch="Fill"/>
+            <Button Content="Burgers" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="38" FontSize="24" FontFamily="Gill Sans MT" Click="Burgers_Click" Canvas.Left="130" Canvas.Top="248"/>
+            <Button Content="Desserts" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="38" FontSize="24" FontFamily="Gill Sans MT" Click="Desserts_Click" Canvas.Left="232" Canvas.Top="348"/>
+            <Button Content="Sides" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="38" FontSize="24" FontFamily="Gill Sans MT" Click="Sides_Click" Canvas.Left="23" Canvas.Top="348"/>
+            <Button Content="Drinks" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="38" FontSize="24" FontFamily="Gill Sans MT" Click="Drinks_Click" Canvas.Left="128" Canvas.Top="453"/>
 
         </Canvas>
 
@@ -107,10 +109,7 @@
             <Button x:Name="Menu_Button3" Content="Menu" HorizontalAlignment="Left" Height="23" Margin="293,32,0,0" VerticalAlignment="Top" Width="49" BorderBrush="Red" Foreground="White" Background="Red"/>
 
         </Canvas>
-        
-        
-        
-        
+
         <Canvas x:Name="Drinks">
 
             <ScrollViewer HorizontalAlignment="Left" Height="476" Margin="0,80,-18,0" VerticalAlignment="Top" Width="385">
@@ -145,8 +144,6 @@
 
 
         </Canvas>
-
-
 
     </Grid>
 
