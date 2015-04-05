@@ -10,19 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace FingerFoodApp
 {
     /// <summary>
-    /// Interaction logic for Burgers.xaml
+    /// Interaction logic for DrinksList.xaml
     /// </summary>
-    public partial class Burgers : Window
+    public partial class DrinksList : Page
     {
-        public Burgers()
+        public DrinksList()
         {
             InitializeComponent();
-            // Arnold suks bick dalls xDDDDDD
         }
     }
 }

@@ -10,18 +10,30 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace FingerFoodApp
 {
     /// <summary>
-    /// Interaction logic for Sides.xaml
+    /// Interaction logic for BurgersList.xaml
     /// </summary>
-    public partial class Sides : Window
+    public partial class BurgersList : Page
     {
-        public Sides()
+
+        DrinksList drinksList = new DrinksList();
+
+        public BurgersList()
         {
             InitializeComponent();
+        }
+
+        private void Simple_Simon_Clicked(object sender, RoutedEventArgs e)
+        {
+            Current_Cost.Content = "Test";
+            this.NavigationService.Navigate(drinksList);
+            
+            
         }
     }
 }

@@ -10,18 +10,29 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace FingerFoodApp
 {
     /// <summary>
-    /// Interaction logic for Desserts.xaml
+    /// Interaction logic for FirstWindow.xaml
     /// </summary>
-    public partial class Desserts : Window
+    public partial class FirstWindow : Window
     {
-        public Desserts()
+        public FirstWindow()
         {
             InitializeComponent();
+
+            // Setting the default content for main window
+            navFrame.Navigate(new Uri("MainMenu.xaml", UriKind.Relative));
+
+
+        }
+
+        private void Frame_Navigated(object sender, NavigationEventArgs e)
+        {
+
         }
     }
 }

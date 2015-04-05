@@ -1,7 +1,12 @@
-﻿<Window x:Class="FingerFoodApp.Desserts"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Drinks" Height="655" Width="375">
+﻿<Page x:Class="FingerFoodApp.DessertsList"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="655" d:DesignWidth="375"
+	Title="DessertsList">
+
     <Grid>
         <ScrollViewer HorizontalAlignment="Left" Height="476" Margin="0,80,-18,0" VerticalAlignment="Top" Width="385">
             <Grid Height="476" Width="368">
@@ -27,4 +32,4 @@
 
 
     </Grid>
-</Window>
+</Page>

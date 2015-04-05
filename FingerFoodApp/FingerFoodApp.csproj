@@ -68,43 +68,49 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Drinks.xaml.cs">
-      <DependentUpon>Drinks.xaml</DependentUpon>
+    <Compile Include="BurgersList.xaml.cs">
+      <DependentUpon>BurgersList.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Sides.xaml.cs">
-      <DependentUpon>Sides.xaml</DependentUpon>
+    <Compile Include="DessertsList.xaml.cs">
+      <DependentUpon>DessertsList.xaml</DependentUpon>
     </Compile>
-    <Page Include="Burgers.xaml">
+    <Compile Include="DrinksList.xaml.cs">
+      <DependentUpon>DrinksList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FirstWindow.xaml.cs">
+      <DependentUpon>FirstWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.xaml.cs">
+      <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SidesList.xaml.cs">
+      <DependentUpon>SidesList.xaml</DependentUpon>
+    </Compile>
+    <Page Include="BurgersList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Desserts.xaml">
+    <Page Include="DessertsList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Drinks.xaml">
+    <Page Include="DrinksList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="FirstWindow.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Burgers.xaml.cs">
-      <DependentUpon>Burgers.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Desserts.xaml.cs">
-      <DependentUpon>Desserts.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Page Include="Sides.xaml">
+    <Page Include="SidesList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -189,6 +195,9 @@
     <Resource Include="choco milk.jpg" />
     <Resource Include="edge haku latte.jpg" />
     <Resource Include="pop mcgee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="exampleDinerTable2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
