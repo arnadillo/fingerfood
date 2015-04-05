@@ -71,6 +71,7 @@
     <Compile Include="BurgersList.xaml.cs">
       <DependentUpon>BurgersList.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CustomerCart.cs" />
     <Compile Include="DessertsList.xaml.cs">
       <DependentUpon>DessertsList.xaml</DependentUpon>
     </Compile>

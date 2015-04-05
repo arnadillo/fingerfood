@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace FingerFoodApp
 {
     /// <summary>
@@ -30,10 +31,13 @@ namespace FingerFoodApp
 
         private void Simple_Simon_Clicked(object sender, RoutedEventArgs e)
         {
-            Current_Cost.Content = "Test";
-            this.NavigationService.Navigate(drinksList);
+            CustomerCart customerCart = new CustomerCart();
             
-            
+            Current_Cost.Content = "Current Total : $" + customerCart.currentTotal.ToString();
+            //this.NavigationService.Navigate(drinksList);
+
         }
+
     }
+
 }
