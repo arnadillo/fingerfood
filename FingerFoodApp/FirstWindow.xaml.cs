@@ -24,15 +24,36 @@ namespace FingerFoodApp
         {
             InitializeComponent();
 
+            // Hiding Back and Menu buttons from main menu
+            
+
             // Setting the default content for main window
             navFrame.Navigate(new Uri("MainMenu.xaml", UriKind.Relative));
-
+            
+           
 
         }
 
         private void Frame_Navigated(object sender, NavigationEventArgs e)
         {
-
+            //navHeader.Visibility = Visibility.Hidden;
         }
+
+
+        private void Back_Clicked(object sender, RoutedEventArgs e)
+        {
+            if (navFrame.CanGoBack == true)
+            {
+                navFrame.GoBack();
+            }
+        }
+
+        private void Menu_Clicked(object sender, RoutedEventArgs e)
+        {
+            // Need to tweak this with the Customer's current total
+            navFrame.Navigate(new Uri("MainMenu.xaml", UriKind.Relative));
+        }
+
+        
     }
 }

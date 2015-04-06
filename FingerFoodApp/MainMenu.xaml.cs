@@ -27,7 +27,8 @@ namespace FingerFoodApp
 
         public MainMenu()
         {
-            InitializeComponent();
+            InitializeComponent();  
+
         }
 
         private void Burgers_Click(object sender, RoutedEventArgs e)

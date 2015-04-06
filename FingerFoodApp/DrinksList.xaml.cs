@@ -23,6 +23,10 @@ namespace FingerFoodApp
         public DrinksList()
         {
             InitializeComponent();
+            //navHeader.Navigate(new Uri("NavHeader.xaml", UriKind.Relative)); // Load up the Navigation header for each list page
+
         }
+
+        
     }
 }
