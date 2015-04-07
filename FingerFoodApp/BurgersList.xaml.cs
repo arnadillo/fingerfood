@@ -28,9 +28,6 @@ namespace FingerFoodApp
         public BurgersList()
         {
             InitializeComponent();
-            
-            
-
         }
 
         private void Simple_Simon_Clicked(object sender, RoutedEventArgs e)

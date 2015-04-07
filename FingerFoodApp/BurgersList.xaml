@@ -31,7 +31,6 @@
                 <TextBlock x:Name="Meat_Prism_Price" HorizontalAlignment="Left" Height="21" Margin="317,329,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Background="Black" Foreground="White" FontSize="14"><Run Text=" "/><Run Text="$"/><Run Text="4"/><Run Text=".99"/></TextBlock>
                 <TextBlock x:Name="Whoopity_Price" HorizontalAlignment="Left" Height="21" Margin="317,399,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Background="Black" Foreground="White" FontSize="14"><Run Text=" "/><Run Text="$"/><Run Text="3"/><Run Text=".99"/></TextBlock>
                 <TextBlock x:Name="Mount_Angus_Price" HorizontalAlignment="Left" Height="21" Margin="318,465,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Background="Black" Foreground="White" FontSize="14"><Run Text=" "/><Run Text="$"/><Run Text="8"/><Run Text=".99"/></TextBlock>
-                <Frame Name="navFrame" HorizontalAlignment="Left" Height="486" VerticalAlignment="Top" Width="368"/>
             </Grid>
         </ScrollViewer>
         <TextBlock x:Name="Burgers_Text" HorizontalAlignment="Left" Height="80" TextWrapping="Wrap" Text="Burgers" VerticalAlignment="Top" Width="367" TextAlignment="Center" FontFamily="Freestyle Script" FontSize="72" Foreground="Red" OpacityMask="#FFB26666"/>
