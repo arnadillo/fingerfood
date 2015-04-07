@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace FingerFoodApp
 {
     /// <summary>
@@ -27,13 +28,14 @@ namespace FingerFoodApp
 
         public MainMenu()
         {
-            InitializeComponent();  
-
+            InitializeComponent();
+            
         }
 
         private void Burgers_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(burgersList);
+            
         }
 
         private void Desserts_Click(object sender, RoutedEventArgs e)

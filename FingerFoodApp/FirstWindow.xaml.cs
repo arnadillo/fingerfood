@@ -20,23 +20,32 @@ namespace FingerFoodApp
     /// </summary>
     public partial class FirstWindow : Window
     {
+        
         public FirstWindow()
         {
             InitializeComponent();
-
+            MainMenu testPage = new MainMenu();
             // Hiding Back and Menu buttons from main menu
+            navHeader.Visibility = Visibility.Visible;
             
 
             // Setting the default content for main window
-            navFrame.Navigate(new Uri("MainMenu.xaml", UriKind.Relative));
-            
-           
+            //navFrame.Navigate(new Uri("MainMenu.xaml", UriKind.Relative));
+            navFrame.Content = testPage;
 
+            
+
+            //this.getBackButton.Visibility = Visibility.Visible;
+
+            
         }
+
+        public Button getBackButton { get { return Back_Button; } }
+        
 
         private void Frame_Navigated(object sender, NavigationEventArgs e)
         {
-            //navHeader.Visibility = Visibility.Hidden;
+            
         }
 
 

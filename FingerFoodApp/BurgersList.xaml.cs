@@ -23,15 +23,20 @@ namespace FingerFoodApp
     {
 
         DrinksList drinksList = new DrinksList();
+        
 
         public BurgersList()
         {
             InitializeComponent();
+            
+            
+
         }
 
         private void Simple_Simon_Clicked(object sender, RoutedEventArgs e)
         {
             CustomerCart customerCart = new CustomerCart();
+            
             
             Current_Cost.Content = "Current Total : $" + customerCart.currentTotal.ToString();
             //this.NavigationService.Navigate(drinksList);

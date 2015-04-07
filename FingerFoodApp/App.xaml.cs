@@ -13,5 +13,10 @@ namespace FingerFoodApp
     /// </summary>
     public partial class App : Application
     {
+        void App_Startup(object sender, StartupEventArgs e)
+        {
+            FirstWindow firstWindow = new FirstWindow();
+            firstWindow.Show();
+        }
     }
 }
