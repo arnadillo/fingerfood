@@ -1,0 +1,38 @@
+﻿<Page x:Class="FingerFoodApp.KumKakyeDesc"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="655" d:DesignWidth="375"
+	Title="KumKakyeDesc">
+
+    <Grid>
+        <Border BorderBrush="Black" BorderThickness="0,1" HorizontalAlignment="Left" Height="181" Margin="0,80,0,0" VerticalAlignment="Top" Width="367">
+            <Image Margin="24,24,217,57" Source="kum kakye.jpg"/>
+
+        </Border>
+        <TextBlock x:Name="Sides_Header" HorizontalAlignment="Left" Height="80" TextWrapping="Wrap" VerticalAlignment="Top" Width="357" TextAlignment="Center" FontFamily="Freestyle Script" FontSize="40" Foreground="Red" OpacityMask="#FFB26666" Margin="0,25,0,0"><Run Text="Lemon "/><Run Text="Kum Kakye"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="128" Margin="179,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" FontFamily="Gill Sans MT" Padding="10" FontSize="16" TextAlignment="Center"><Run Text="A lemon flavored slice of cake from the Kum "/><Run Text="Kakye "/><Run Text="Kumpany"/><Run Text="."/></TextBlock>
+        <GroupBox Header="Customize" HorizontalAlignment="Left" Height="115" Margin="60,284,0,0" VerticalAlignment="Top" Width="256" FontSize="28" FontFamily="Freestyle Script">
+            <StackPanel Margin="0,0,0,3">
+                <CheckBox x:Name="MustardBox">
+                    <TextBlock Text="Whipped Cream" FontWeight="Normal" FontFamily="Segoe UI" FontSize="14"/>
+                </CheckBox>
+                <CheckBox x:Name="MustardBox_Copy">
+                    <TextBlock FontWeight="Normal" FontFamily="Segoe UI" FontSize="14" Width="152" Text="Crumbled Almonds"/>
+                </CheckBox>
+                <CheckBox x:Name="MustardBox_Copy1">
+                    <TextBlock Text="Lemon Raspberry Drizzle" FontWeight="Normal" FontFamily="Segoe UI" FontSize="14"/>
+                </CheckBox>
+                <CheckBox x:Name="MustardBox_Copy2">
+                    <TextBlock FontWeight="Normal" FontFamily="Segoe UI" FontSize="14"><Run Text="Vanilla"/><Run Text=" Shavings"/></TextBlock>
+                </CheckBox>
+            </StackPanel>
+        </GroupBox>
+        <Button Content="Add to order" HorizontalAlignment="Left" Height="41" Margin="60,458,0,0" VerticalAlignment="Top" Width="256" BorderBrush="Black" Background="#FF00AC1F" BorderThickness="2" FontSize="20"/>
+        <TextBlock x:Name="Choco_Sundae_Price" HorizontalAlignment="Left" Height="21" Margin="67,212,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="43" Background="Black" Foreground="White" FontSize="14"><Run Text=" "/><Run Text="$"/><Run Text="8"/><Run Text="."/><Run Text="4"/><Run Text="9"/></TextBlock>
+        <Button x:Name="Current_Cost" Content="Current Total : $0.00" HorizontalAlignment="Left" Height="63" Margin="0,556,0,0" VerticalAlignment="Top" Width="367" Background="#FFFF2121" BorderBrush="Black" Foreground="White" BorderThickness="0,1" FontSize="24"/>
+
+    </Grid>
+</Page>

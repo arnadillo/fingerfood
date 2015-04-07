@@ -20,9 +20,36 @@ namespace FingerFoodApp
     /// </summary>
     public partial class DessertsList : Page
     {
+        ChocoSundaeDesc chocoSundae = new ChocoSundaeDesc();
+        BononoSplotDesc bononoSplot = new BononoSplotDesc();
+        BooCakeDesc booCake = new BooCakeDesc();
+        KumKakyeDesc kumKakye = new KumKakyeDesc();
+
         public DessertsList()
         {
             InitializeComponent();
         }
+
+        private void Choco_Sundae_Clicked(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(chocoSundae);
+        }
+
+        private void Bonono_Splot_Clicked(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(bononoSplot);
+        }
+
+        private void Boo_Cake_Clicked(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(booCake);
+        }
+
+        private void Kum_Kakye_Clicked(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(kumKakye);
+        }
+
+
     }
 }

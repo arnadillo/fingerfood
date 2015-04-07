@@ -68,8 +68,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BononoSplotDesc.xaml.cs">
+      <DependentUpon>BononoSplotDesc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BooCakeDesc.xaml.cs">
+      <DependentUpon>BooCakeDesc.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BurgersList.xaml.cs">
       <DependentUpon>BurgersList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChocoSundaeDesc.xaml.cs">
+      <DependentUpon>ChocoSundaeDesc.xaml</DependentUpon>
     </Compile>
     <Compile Include="CustomerCart.cs" />
     <Compile Include="DessertsList.xaml.cs">
@@ -81,13 +90,28 @@
     <Compile Include="FirstWindow.xaml.cs">
       <DependentUpon>FirstWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="KumKakyeDesc.xaml.cs">
+      <DependentUpon>KumKakyeDesc.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="SidesList.xaml.cs">
       <DependentUpon>SidesList.xaml</DependentUpon>
     </Compile>
+    <Page Include="BononoSplotDesc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BooCakeDesc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="BurgersList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChocoSundaeDesc.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -100,6 +124,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="FirstWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KumKakyeDesc.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

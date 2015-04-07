@@ -10,10 +10,10 @@
     <Grid>
         <ScrollViewer HorizontalAlignment="Left" Height="476" Margin="0,80,-18,0" VerticalAlignment="Top" Width="385">
             <Grid Height="476" Width="368">
-                <Button x:Name="Choco_Sundae" Content="Choco Sundae" HorizontalAlignment="Left" Height="70" VerticalAlignment="Top" Width="367" BorderThickness="0,1" FontFamily="Gill Sans MT" FontSize="24" BorderBrush="Black" Background="White"/>
-                <Button x:Name="Bonono_Splot" Content="Bonono Splot" HorizontalAlignment="Left" Height="70" VerticalAlignment="Top" Width="367" BorderThickness="0,0,0,1" FontFamily="Gill Sans MT" FontSize="24" BorderBrush="Black" Background="White" Margin="0,70,0,0"/>
-                <Button x:Name="Boo_Cake" Content="Boo Cake" HorizontalAlignment="Left" Height="70" VerticalAlignment="Top" Width="367" BorderThickness="0,0,0,1" FontFamily="Gill Sans MT" FontSize="24" BorderBrush="Black" Background="White" Margin="0,140,0,0"/>
-                <Button x:Name="Kum_Kakye" Content="Kum Kakye" HorizontalAlignment="Left" Height="70" VerticalAlignment="Top" Width="367" BorderThickness="0,0,0,1" FontFamily="Gill Sans MT" FontSize="24" BorderBrush="Black" Background="White" Margin="0,210,0,0"/>
+                <Button x:Name="Choco_Sundae" Content="Choco Sundae" HorizontalAlignment="Left" Height="70" VerticalAlignment="Top" Width="367" BorderThickness="0,1" FontFamily="Gill Sans MT" FontSize="24" BorderBrush="Black" Background="White" Click="Choco_Sundae_Clicked"/>
+                <Button x:Name="Bonono_Splot" Content="Bonono Splot" HorizontalAlignment="Left" Height="70" VerticalAlignment="Top" Width="367" BorderThickness="0,0,0,1" FontFamily="Gill Sans MT" FontSize="24" BorderBrush="Black" Background="White" Margin="0,70,0,0" Click="Bonono_Splot_Clicked"/>
+                <Button x:Name="Boo_Cake" Content="Boo Cake" HorizontalAlignment="Left" Height="70" VerticalAlignment="Top" Width="367" BorderThickness="0,0,0,1" FontFamily="Gill Sans MT" FontSize="24" BorderBrush="Black" Background="White" Margin="0,140,0,0" Click="Boo_Cake_Clicked"/>
+                <Button x:Name="Kum_Kakye" Content="Kum Kakye" HorizontalAlignment="Left" Height="70" VerticalAlignment="Top" Width="367" BorderThickness="0,0,0,1" FontFamily="Gill Sans MT" FontSize="24" BorderBrush="Black" Background="White" Margin="0,210,0,0" Click="Kum_Kakye_Clicked"/>
                 <Image x:Name="Choco_Sundae_Picture" HorizontalAlignment="Left" Height="55" Margin="19,10,0,0" VerticalAlignment="Top" Width="52" Source="choco sundae.jpg"/>
                 <Image x:Name="BooCake_Picture" HorizontalAlignment="Left" Height="60" Margin="10,145,0,0" VerticalAlignment="Top" Width="72" Source="boo cake.jpg"/>
                 <Image x:Name="BononoSplot_Picture" HorizontalAlignment="Left" Height="60" Margin="10,75,0,0" VerticalAlignment="Top" Width="72" Source="bonono splot.jpg"/>

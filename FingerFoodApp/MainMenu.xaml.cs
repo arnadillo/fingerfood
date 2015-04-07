@@ -29,13 +29,11 @@ namespace FingerFoodApp
         public MainMenu()
         {
             InitializeComponent();
-            
         }
 
         private void Burgers_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(burgersList);
-            
         }
 
         private void Desserts_Click(object sender, RoutedEventArgs e)
