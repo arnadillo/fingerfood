@@ -23,14 +23,17 @@ namespace FingerFoodApp
     {
 
         DrinksList drinksList = new DrinksList();
-        
-        
+        SimpleSimonDesc simpleSimon = new SimpleSimonDesc();
+        BangkokSandwichDesc bangkokMeat = new BangkokSandwichDesc();
+        CamelBurgerDesc bactrianCamel = new CamelBurgerDesc();
+        InvertedBurgerDesc invertedBurger = new InvertedBurgerDesc();
+        meatPrismDesc meatPrism = new meatPrismDesc();
+        WhoopityDesc whoopity = new WhoopityDesc();
+        MountAngusDesc mountAngus = new MountAngusDesc();
 
         public BurgersList()
         {
             InitializeComponent();
-            
-            
         }
 
         private void Simple_Simon_Clicked(object sender, RoutedEventArgs e)
@@ -41,8 +44,38 @@ namespace FingerFoodApp
             
             
             Current_Cost.Content = "Current Total : $" + customerCart.currentTotal.ToString();
-            //this.NavigationService.Navigate(drinksList);
+            this.NavigationService.Navigate(simpleSimon);
 
+        }
+
+        private void bangkok_click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(bangkokMeat);
+        }
+
+        private void Bactrian_Camel_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(bactrianCamel);
+        }
+
+        private void Inverted_Burger_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(invertedBurger);
+        }
+
+        private void Meat_Prism_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(meatPrism);
+        }
+
+        private void Whoopity_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(whoopity);
+        }
+
+        private void Mount_Angus_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(mountAngus);
         }
 
     }
