@@ -22,6 +22,8 @@ namespace FingerFoodApp
     public partial class BurgersList : Page
     {
 
+        double totalDisplay;
+        
         DrinksList drinksList = new DrinksList();
         SimpleSimonDesc simpleSimon = new SimpleSimonDesc();
         BangkokSandwichDesc bangkokMeat = new BangkokSandwichDesc();
@@ -31,20 +33,32 @@ namespace FingerFoodApp
         WhoopityDesc whoopity = new WhoopityDesc();
         MountAngusDesc mountAngus = new MountAngusDesc();
 
+        CustomerCart total;
+
+
         public BurgersList()
         {
             InitializeComponent();
         }
 
+        public BurgersList(CustomerCart tots)
+        {
+            InitializeComponent();
+            
+            totalDisplay = tots.getTotal();
+            total = new CustomerCart(totalDisplay);
+            Current_Cost.Content = "Current Total: " + totalDisplay.ToString();
+        }
+
         private void Simple_Simon_Clicked(object sender, RoutedEventArgs e)
         {
-            CustomerCart customerCart = new CustomerCart();
+            //CustomerCart customerCart = new CustomerCart();
             Window parentWindow = Window.GetWindow(this);
             object obj = parentWindow.FindName("Back_Button");
             
             
-            Current_Cost.Content = "Current Total : $" + customerCart.currentTotal.ToString();
-            this.NavigationService.Navigate(simpleSimon);
+            //Current_Cost.Content = "Current Total : $" + customerCart.currentTotal.ToString();
+            this.NavigationService.Navigate(new SimpleSimonDesc(total));
 
         }
 
@@ -77,6 +91,8 @@ namespace FingerFoodApp
         {
             this.NavigationService.Navigate(mountAngus);
         }
+
+
 
     }
 

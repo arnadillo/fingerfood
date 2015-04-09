@@ -20,9 +20,31 @@ namespace FingerFoodApp
     /// </summary>
     public partial class SimpleSimonDesc : Page
     {
+
+        private double price;
+        private double displayTotal;
+        CustomerCart total;
+
         public SimpleSimonDesc()
         {
             InitializeComponent();
         }
+
+        public SimpleSimonDesc(CustomerCart tots)
+        {
+            InitializeComponent();
+            displayTotal = tots.getTotal();
+            total = new CustomerCart(displayTotal);
+            Current_Cost_SimpleSimon.Content = "Current total = $" + displayTotal.ToString();
+        }
+
+        private void Add_To_Order_Click(object sender, RoutedEventArgs e)
+        {
+            //price = Convert.ToDouble(Simple_Simon_Price);
+            total.addTotal(1.99);
+            Current_Cost_SimpleSimon.Content = "Current total = $" + total.getTotal().ToString();
+        }
+
+
     }
 }
