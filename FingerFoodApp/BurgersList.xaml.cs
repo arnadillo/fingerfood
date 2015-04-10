@@ -35,11 +35,13 @@ namespace FingerFoodApp
 
         CustomerCart total;
 
+        
 
         public BurgersList()
         {
             InitializeComponent();
             ((FirstWindow)System.Windows.Application.Current.MainWindow).navHeader.Visibility = Visibility.Visible;
+            Application.Current.Properties["isList"] = true;
         }
 
         public BurgersList(CustomerCart tots)
@@ -60,7 +62,7 @@ namespace FingerFoodApp
             
             
             //Current_Cost.Content = "Current Total : $" + customerCart.currentTotal.ToString();
-            this.NavigationService.Navigate(simpleSimon);
+            this.NavigationService.Navigate(new SimpleSimonDesc());
 
         }
 

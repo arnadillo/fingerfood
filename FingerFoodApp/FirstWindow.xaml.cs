@@ -37,6 +37,7 @@ namespace FingerFoodApp
             navFrame.Content = testPage;
 
             Application.Current.Properties["CurrentTotal"] = 0.0f;
+            Application.Current.Properties["isList"] = false;
             
 
             //this.getBackButton.Visibility = Visibility.Visible;
@@ -63,15 +64,23 @@ namespace FingerFoodApp
 
         private void Back_Clicked(object sender, RoutedEventArgs e)
         {
-            if (navFrame.CanGoBack == true)
+            if (navFrame.CanGoBack == true && (Boolean)Application.Current.Properties["isList"])
+            {
+                navFrame.GoBack();
+                navHeader.Visibility = Visibility.Hidden;
+            }
+            else if (navFrame.CanGoBack == true)
             {
                 navFrame.GoBack();
             }
+
+            
         }
 
         private void Menu_Clicked(object sender, RoutedEventArgs e)
         {
             // Need to tweak this with the Customer's current total
+            navHeader.Visibility = Visibility.Hidden;
             navFrame.Navigate(new Uri("MainMenu.xaml", UriKind.Relative));
         }
 

@@ -30,6 +30,7 @@ namespace FingerFoodApp
         public SimpleSimonDesc()
         {
             InitializeComponent();
+            Application.Current.Properties["isList"] = false;
         }
 
         public SimpleSimonDesc(CustomerCart tots)
