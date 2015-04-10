@@ -28,8 +28,6 @@ namespace FingerFoodApp
         DessertsList dessertsList = new DessertsList();
         SidesList sidesList = new SidesList();
 
-      
-
         public MainMenu()
         {
             InitializeComponent();
@@ -54,6 +52,27 @@ namespace FingerFoodApp
         {
             this.NavigationService.Navigate(drinksList);
         }
+
+        private void burgers_imgPressed(object sender, MouseButtonEventArgs e)
+        {
+            this.NavigationService.Navigate(new BurgersList());
+        }
+
+        private void sides_imgPressed(object sender, MouseButtonEventArgs e)
+        {
+            this.NavigationService.Navigate(new SidesList());
+        }
+
+        private void drinks_imgPressed(object sender, MouseButtonEventArgs e)
+        {
+            this.NavigationService.Navigate(new DrinksList());
+        }
+
+        private void desserts_imgPressed(object sender, MouseButtonEventArgs e)
+        {
+            this.NavigationService.Navigate(new DessertsList());
+        }
+
 
     }
 }

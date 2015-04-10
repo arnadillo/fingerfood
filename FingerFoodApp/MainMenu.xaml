@@ -11,13 +11,33 @@
 
         <Canvas x:Name="MainMenuScreen">
             <Image Source="exampleDinerTable2.jpg" Stretch="Fill" Canvas.Left="23" Canvas.Top="168" Height="323" Width="312"/>
-            <Button Content="Burgers" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="38" FontSize="24" FontFamily="Gill Sans MT" Click="Burgers_Click" Canvas.Left="130" Canvas.Top="248"/>
-            <Button Content="Desserts" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="38" FontSize="24" FontFamily="Gill Sans MT" Click="Desserts_Click" Canvas.Left="232" Canvas.Top="348"/>
-            <Button Content="Sides" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="38" FontSize="24" FontFamily="Gill Sans MT" Click="Sides_Click" Canvas.Left="23" Canvas.Top="348"/>
+            <Button Content="Burgers" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="38" FontSize="24" FontFamily="Gill Sans MT" Click="Burgers_Click" Canvas.Left="130" Canvas.Top="248" Background="#FFDDDDDD"/>
+            <Button Content="Desserts" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="38" FontSize="24" FontFamily="Gill Sans MT" Click="Desserts_Click" Canvas.Left="228" Canvas.Top="348"/>
+            <Button Content="Sides" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="38" FontSize="24" FontFamily="Gill Sans MT" Click="Sides_Click" Canvas.Left="33" Canvas.Top="348"/>
             <Button Content="Drinks" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="38" FontSize="24" FontFamily="Gill Sans MT" Click="Drinks_Click" Canvas.Left="128" Canvas.Top="453"/>
             <TextBlock HorizontalAlignment="Left" Margin="21,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="111" Width="323" FontSize="100" Foreground="Red" FontFamily="Freestyle Script" Background="White"><Run Text="Finger "/><Run Text="Food"/></TextBlock>
+            <Image x:Name="burger_FromMenu" Height="63" Canvas.Left="126" Canvas.Top="185" Width="96" MouseUp="burgers_imgPressed" Source="hashbrown.jpg">
+                <Image.OpacityMask>
+                    <ImageBrush/>
+                </Image.OpacityMask>
+            </Image>
 
         </Canvas>
+        <Image x:Name="sides_FromMenu" MouseUp="sides_imgPressed" Source="hashbrown.jpg" Margin="31,279,247,309">
+            <Image.OpacityMask>
+                <ImageBrush/>
+            </Image.OpacityMask>
+        </Image>
+        <Image x:Name="drinks_FromMenu" MouseUp="drinks_imgPressed" Source="hashbrown.jpg" Margin="131,384,156,204">
+            <Image.OpacityMask>
+                <ImageBrush/>
+            </Image.OpacityMask>
+        </Image>
+        <Image x:Name="desserts_FromMenu" MouseUp="desserts_imgPressed" Source="hashbrown.jpg" Margin="230,279,57,309">
+            <Image.OpacityMask>
+                <ImageBrush/>
+            </Image.OpacityMask>
+        </Image>
 
     </Grid>
 </Page>
