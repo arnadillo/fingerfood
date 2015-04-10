@@ -39,6 +39,7 @@ namespace FingerFoodApp
         public BurgersList()
         {
             InitializeComponent();
+            ((FirstWindow)System.Windows.Application.Current.MainWindow).navHeader.Visibility = Visibility.Visible;
         }
 
         public BurgersList(CustomerCart tots)
@@ -48,6 +49,7 @@ namespace FingerFoodApp
             totalDisplay = tots.getTotal();
             total = new CustomerCart(totalDisplay);
             Current_Cost.Content = "Current Total: $" + totalDisplay.ToString();
+            
         }
 
         private void Simple_Simon_Clicked(object sender, RoutedEventArgs e)

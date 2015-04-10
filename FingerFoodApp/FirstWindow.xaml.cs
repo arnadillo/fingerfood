@@ -29,14 +29,14 @@ namespace FingerFoodApp
             InitializeComponent();
             MainMenu testPage = new MainMenu();
             // Hiding Back and Menu buttons from main menu
-            navHeader.Visibility = Visibility.Visible;
+            navHeader.Visibility = Visibility.Hidden;
             
 
             // Setting the default content for main window
             //navFrame.Navigate(new Uri("MainMenu.xaml", UriKind.Relative));
             navFrame.Content = testPage;
 
-            Application.Current.Properties["CurrentTotal"] = 14.0f;
+            Application.Current.Properties["CurrentTotal"] = 0.0f;
             
 
             //this.getBackButton.Visibility = Visibility.Visible;
