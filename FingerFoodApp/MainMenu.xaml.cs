@@ -21,7 +21,6 @@ namespace FingerFoodApp
     /// </summary>
     public partial class MainMenu : Page
     {
-        CustomerCart total = new CustomerCart(0.00);
         
         //BurgersList burgersList = new BurgersList();
         DrinksList drinksList = new DrinksList();
@@ -29,6 +28,11 @@ namespace FingerFoodApp
         SidesList sidesList = new SidesList();
 
       
+
+        public MainMenu()
+        {
+            InitializeComponent();
+        }
 
         public MainMenu()
         {
@@ -54,6 +58,27 @@ namespace FingerFoodApp
         {
             this.NavigationService.Navigate(drinksList);
         }
+
+        private void burgers_imgPressed(object sender, MouseButtonEventArgs e)
+        {
+            this.NavigationService.Navigate(new BurgersList());
+        }
+
+        private void sides_imgPressed(object sender, MouseButtonEventArgs e)
+        {
+            this.NavigationService.Navigate(new SidesList());
+        }
+
+        private void drinks_imgPressed(object sender, MouseButtonEventArgs e)
+        {
+            this.NavigationService.Navigate(new DrinksList());
+        }
+
+        private void desserts_imgPressed(object sender, MouseButtonEventArgs e)
+        {
+            this.NavigationService.Navigate(new DessertsList());
+        }
+
 
     }
 }
