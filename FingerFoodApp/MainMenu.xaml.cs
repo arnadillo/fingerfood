@@ -21,9 +21,9 @@ namespace FingerFoodApp
     /// </summary>
     public partial class MainMenu : Page
     {
-        CustomerCart total = new CustomerCart(12.01);
+        CustomerCart total = new CustomerCart(0.00);
         
-        //BurgersList burgersList = new BurgersList();
+        BurgersList burgersList = new BurgersList();
         DrinksList drinksList = new DrinksList();
         DessertsList dessertsList = new DessertsList();
         SidesList sidesList = new SidesList();
@@ -37,7 +37,7 @@ namespace FingerFoodApp
 
         private void Burgers_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new BurgersList(total));
+            this.NavigationService.Navigate(burgersList);
 
         }
 

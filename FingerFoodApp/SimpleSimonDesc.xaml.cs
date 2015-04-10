@@ -23,7 +23,9 @@ namespace FingerFoodApp
 
         private double price;
         private double displayTotal;
-        CustomerCart total;
+        //CustomerCart total;
+
+       // FirstWindow update = new FirstWindow();
 
         public SimpleSimonDesc()
         {
@@ -34,15 +36,17 @@ namespace FingerFoodApp
         {
             InitializeComponent();
             displayTotal = tots.getTotal();
-            total = new CustomerCart(displayTotal);
+            //total = new CustomerCart(displayTotal);
             Current_Cost_SimpleSimon.Content = "Current total = $" + displayTotal.ToString();
         }
 
         private void Add_To_Order_Click(object sender, RoutedEventArgs e)
         {
-            //price = Convert.ToDouble(Simple_Simon_Price);
-            total.addTotal(1.99);
-            Current_Cost_SimpleSimon.Content = "Current total = $" + total.getTotal().ToString();
+            float CurrentTotal = (float)Application.Current.Properties["CurrentTotal"];
+            CurrentTotal += 1.99f;
+            Application.Current.Properties["CurrentTotal"] = CurrentTotal;
+            Current_Cost_SimpleSimon.Content = "Current Total: $" + CurrentTotal.ToString();
+            ((FirstWindow)System.Windows.Application.Current.MainWindow).Current_Cost.Content = "Current Total: $" + CurrentTotal.ToString();
         }
 
 

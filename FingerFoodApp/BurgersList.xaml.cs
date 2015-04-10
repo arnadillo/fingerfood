@@ -47,18 +47,18 @@ namespace FingerFoodApp
             
             totalDisplay = tots.getTotal();
             total = new CustomerCart(totalDisplay);
-            Current_Cost.Content = "Current Total: " + totalDisplay.ToString();
+            Current_Cost.Content = "Current Total: $" + totalDisplay.ToString();
         }
 
         private void Simple_Simon_Clicked(object sender, RoutedEventArgs e)
         {
             //CustomerCart customerCart = new CustomerCart();
-            Window parentWindow = Window.GetWindow(this);
-            object obj = parentWindow.FindName("Back_Button");
+            //Window parentWindow = Window.GetWindow(this);
+            //object obj = parentWindow.FindName("Back_Button");
             
             
             //Current_Cost.Content = "Current Total : $" + customerCart.currentTotal.ToString();
-            this.NavigationService.Navigate(new SimpleSimonDesc(total));
+            this.NavigationService.Navigate(simpleSimon);
 
         }
 

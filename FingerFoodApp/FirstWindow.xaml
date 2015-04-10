@@ -9,6 +9,7 @@
         <Canvas x:Name="navHeader">
             <Button x:Name="Menu_Button" Content="Menu" HorizontalAlignment="Left" Height="27" Margin="286,33,0,0" VerticalAlignment="Top" Width="61" BorderBrush="Red" Foreground="White" Background="Red" Click="Menu_Clicked"/>
             <Button x:Name="Back_Button" Content="&lt; Back" HorizontalAlignment="Left" Height="27" Margin="10,33,0,0" VerticalAlignment="Top" Width="61" Background="Red" Foreground="White" BorderBrush="Red" Click="Back_Clicked"/>
+            <Button x:Name="Current_Cost" Content="Current Total : $0.00" HorizontalAlignment="Left" Height="63" Margin="0,556,0,0" VerticalAlignment="Top" Width="367" Background="#FFFF2121" BorderBrush="Black" Foreground="White" BorderThickness="0,1" FontSize="24" Click="Current_Cost_Click"/>
         </Canvas>
     </Grid>
 </Window>

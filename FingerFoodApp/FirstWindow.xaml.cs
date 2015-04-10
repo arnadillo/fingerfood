@@ -21,6 +21,9 @@ namespace FingerFoodApp
     public partial class FirstWindow : Window
     {
         
+
+       
+
         public FirstWindow()
         {
             InitializeComponent();
@@ -33,11 +36,20 @@ namespace FingerFoodApp
             //navFrame.Navigate(new Uri("MainMenu.xaml", UriKind.Relative));
             navFrame.Content = testPage;
 
+            Application.Current.Properties["CurrentTotal"] = 14.0f;
             
 
             //this.getBackButton.Visibility = Visibility.Visible;
+            float CurrentTotal = (float)Application.Current.Properties["CurrentTotal"];
+            Current_Cost.Content = "Current Total: $" + CurrentTotal.ToString();
 
             
+        }
+
+        public void updateTotal()
+        {
+            float CurrentTotal = (float)Application.Current.Properties["CurrentTotal"];
+            Current_Cost.Content = "Current Total: $" + CurrentTotal.ToString();
         }
 
         public Button getBackButton { get { return Back_Button; } }
@@ -61,6 +73,11 @@ namespace FingerFoodApp
         {
             // Need to tweak this with the Customer's current total
             navFrame.Navigate(new Uri("MainMenu.xaml", UriKind.Relative));
+        }
+
+        private void Current_Cost_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
         
