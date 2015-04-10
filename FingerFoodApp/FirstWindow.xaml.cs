@@ -67,7 +67,7 @@ namespace FingerFoodApp
             if (navFrame.CanGoBack == true && (Boolean)Application.Current.Properties["isList"])
             {
                 navFrame.GoBack();
-                navHeader.Visibility = Visibility.Hidden;
+                //navHeader.Visibility = Visibility.Hidden;
             }
             else if (navFrame.CanGoBack == true)
             {

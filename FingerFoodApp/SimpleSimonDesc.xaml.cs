@@ -33,20 +33,11 @@ namespace FingerFoodApp
             Application.Current.Properties["isList"] = false;
         }
 
-        public SimpleSimonDesc(CustomerCart tots)
-        {
-            InitializeComponent();
-            displayTotal = tots.getTotal();
-            //total = new CustomerCart(displayTotal);
-            Current_Cost_SimpleSimon.Content = "Current total = $" + displayTotal.ToString();
-        }
-
         private void Add_To_Order_Click(object sender, RoutedEventArgs e)
         {
             float CurrentTotal = (float)Application.Current.Properties["CurrentTotal"];
             CurrentTotal += 1.99f;
             Application.Current.Properties["CurrentTotal"] = CurrentTotal;
-            Current_Cost_SimpleSimon.Content = "Current Total: $" + CurrentTotal.ToString();
             ((FirstWindow)System.Windows.Application.Current.MainWindow).Current_Cost.Content = "Current Total: $" + CurrentTotal.ToString();
         }
 

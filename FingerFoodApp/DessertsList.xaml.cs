@@ -20,34 +20,30 @@ namespace FingerFoodApp
     /// </summary>
     public partial class DessertsList : Page
     {
-        ChocoSundaeDesc chocoSundae = new ChocoSundaeDesc();
-        BononoSplotDesc bononoSplot = new BononoSplotDesc();
-        BooCakeDesc booCake = new BooCakeDesc();
-        KumKakyeDesc kumKakye = new KumKakyeDesc();
-
         public DessertsList()
         {
             InitializeComponent();
+            ((FirstWindow)System.Windows.Application.Current.MainWindow).navHeader.Visibility = Visibility.Visible;
         }
 
         private void Choco_Sundae_Clicked(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(chocoSundae);
+            this.NavigationService.Navigate(new ChocoSundaeDesc());
         }
 
         private void Bonono_Splot_Clicked(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(bononoSplot);
+            this.NavigationService.Navigate(new BononoSplotDesc());
         }
 
         private void Boo_Cake_Clicked(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(booCake);
+            this.NavigationService.Navigate(new BooCakeDesc());
         }
 
         private void Kum_Kakye_Clicked(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(kumKakye);
+            this.NavigationService.Navigate(new KumKakyeDesc());
         }
 
 

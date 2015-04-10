@@ -21,57 +21,46 @@ namespace FingerFoodApp
     public partial class DrinksList : Page
     {
 
-        BoppityPopDesc boppityPop = new BoppityPopDesc();
-        PopMcgeeDesc popMcgee = new PopMcgeeDesc();
-        CacoCaloDesc cacoCalo = new CacoCaloDesc();
-        BottledWaterDesc bottledWater = new BottledWaterDesc();
-        ChocoMilkDesc chocoMilk = new ChocoMilkDesc();
-        BerrySmoothieDesc berrySmoothie = new BerrySmoothieDesc();
-        EdgeHakuLatteDesc edgeHakuLatte = new EdgeHakuLatteDesc();
-
         public DrinksList()
         {
             InitializeComponent();
-            //navHeader.Navigate(new Uri("NavHeader.xaml", UriKind.Relative)); // Load up the Navigation header for each list page
-
+            ((FirstWindow)System.Windows.Application.Current.MainWindow).navHeader.Visibility = Visibility.Visible;
         }
 
         private void Boppity_Pop_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(boppityPop);
+            this.NavigationService.Navigate(new BoppityPopDesc());
         }
 
         private void Pop_McGee_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(popMcgee);
+            this.NavigationService.Navigate(new PopMcgeeDesc());
         }
 
         private void Caco_Calo_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(cacoCalo);
+            this.NavigationService.Navigate(new CacoCaloDesc());
         }
 
         private void Bottled_Water_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(bottledWater);
+            this.NavigationService.Navigate(new BottledWaterDesc());
         }
 
         private void Choco_Milk_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(chocoMilk);
+            this.NavigationService.Navigate(new ChocoMilkDesc());
         }
 
         private void Berry_Smoothie_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(berrySmoothie);
+            this.NavigationService.Navigate(new BerrySmoothieDesc());
         }
 
         private void Edge_Haku_Latte_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(edgeHakuLatte);
+            this.NavigationService.Navigate(new EdgeHakuLatteDesc());
         }
-
-
         
     }
 }

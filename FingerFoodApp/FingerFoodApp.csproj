@@ -68,14 +68,38 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BangkokSandwichDesc.xaml.cs">
+      <DependentUpon>BangkokSandwichDesc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BerrySmoothieDesc.xaml.cs">
+      <DependentUpon>BerrySmoothieDesc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="blueberryMuffin.xaml.cs">
+      <DependentUpon>blueberryMuffin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BononoSplotDesc.xaml.cs">
       <DependentUpon>BononoSplotDesc.xaml</DependentUpon>
     </Compile>
     <Compile Include="BooCakeDesc.xaml.cs">
       <DependentUpon>BooCakeDesc.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BoppityPopDesc.xaml.cs">
+      <DependentUpon>BoppityPopDesc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BottledWaterDesc.xaml.cs">
+      <DependentUpon>BottledWaterDesc.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BurgersList.xaml.cs">
       <DependentUpon>BurgersList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CacoCaloDesc.xaml.cs">
+      <DependentUpon>CacoCaloDesc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CamelBurgerDesc.xaml.cs">
+      <DependentUpon>CamelBurgerDesc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChocoMilkDesc.xaml.cs">
+      <DependentUpon>ChocoMilkDesc.xaml</DependentUpon>
     </Compile>
     <Compile Include="ChocoSundaeDesc.xaml.cs">
       <DependentUpon>ChocoSundaeDesc.xaml</DependentUpon>
@@ -87,8 +111,20 @@
     <Compile Include="DrinksList.xaml.cs">
       <DependentUpon>DrinksList.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EdgeHakuLatteDesc.xaml.cs">
+      <DependentUpon>EdgeHakuLatteDesc.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FirstWindow.xaml.cs">
       <DependentUpon>FirstWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FriesDesc.xaml.cs">
+      <DependentUpon>FriesDesc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HashbrownDesc.xaml.cs">
+      <DependentUpon>HashbrownDesc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InvertedBurgerDesc.xaml.cs">
+      <DependentUpon>InvertedBurgerDesc.xaml</DependentUpon>
     </Compile>
     <Compile Include="KumKakyeDesc.xaml.cs">
       <DependentUpon>KumKakyeDesc.xaml</DependentUpon>
@@ -96,9 +132,42 @@
     <Compile Include="MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="meatPrismDesc.xaml.cs">
+      <DependentUpon>meatPrismDesc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MountAngusDesc.xaml.cs">
+      <DependentUpon>MountAngusDesc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OnionRingsDesc.xaml.cs">
+      <DependentUpon>OnionRingsDesc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PopMcgeeDesc.xaml.cs">
+      <DependentUpon>PopMcgeeDesc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PoutineDesc.xaml.cs">
+      <DependentUpon>PoutineDesc.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SidesList.xaml.cs">
       <DependentUpon>SidesList.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SimpleSimonDesc.xaml.cs">
+      <DependentUpon>SimpleSimonDesc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WhoopityDesc.xaml.cs">
+      <DependentUpon>WhoopityDesc.xaml</DependentUpon>
+    </Compile>
+    <Page Include="BangkokSandwichDesc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BerrySmoothieDesc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="blueberryMuffin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="BononoSplotDesc.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -107,7 +176,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="BoppityPopDesc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BottledWaterDesc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="BurgersList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CacoCaloDesc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CamelBurgerDesc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChocoMilkDesc.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -123,7 +212,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="EdgeHakuLatteDesc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="FirstWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FriesDesc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HashbrownDesc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InvertedBurgerDesc.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -139,7 +244,35 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="meatPrismDesc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MountAngusDesc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OnionRingsDesc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PopMcgeeDesc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PoutineDesc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SidesList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SimpleSimonDesc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WhoopityDesc.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

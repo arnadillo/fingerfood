@@ -30,26 +30,27 @@ namespace FingerFoodApp
         public SidesList()
         {
             InitializeComponent();
+            ((FirstWindow)System.Windows.Application.Current.MainWindow).navHeader.Visibility = Visibility.Visible;
         }
 
         private void Fries_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(fries);
+            this.NavigationService.Navigate(new FriesDesc());
         }
 
         private void Poutine_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(poutine);
+            this.NavigationService.Navigate(new PoutineDesc());
         }
 
         private void Onion_Rings_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(onionRings);
+            this.NavigationService.Navigate(new OnionRingsDesc());
         }
 
         private void Hashbrown_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(hashbrown);
+            this.NavigationService.Navigate(new HashbrownDesc());
         }
 
         private void Blueberry_Muffin_Click(object sender, RoutedEventArgs e)
