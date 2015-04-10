@@ -27,8 +27,6 @@ namespace FingerFoodApp
         DessertsList dessertsList = new DessertsList();
         SidesList sidesList = new SidesList();
 
-      
-
         public MainMenu()
         {
             InitializeComponent();
