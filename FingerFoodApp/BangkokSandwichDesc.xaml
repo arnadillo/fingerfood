@@ -12,7 +12,7 @@
             <Image Margin="24,24,217,57" Source="bangkok meat sandwich.JPG"/>
 
         </Border>
-        <TextBlock x:Name="Sides_Header" HorizontalAlignment="Left" Height="80" TextWrapping="Wrap" Text="Bangkok Sandwich" VerticalAlignment="Top" Width="367" TextAlignment="Center" FontFamily="Freestyle Script" FontSize="64" Foreground="Red" OpacityMask="#FFB26666"/>
+        <TextBlock x:Name="Sides_Header" HorizontalAlignment="Left" Height="80" TextWrapping="Wrap" Text="Bangkok Sandwich" VerticalAlignment="Top" Width="367" TextAlignment="Center" FontFamily="Freestyle Script" FontSize="40" Foreground="Red" OpacityMask="#FFB26666" Margin="0,18,0,0"/>
         <TextBlock HorizontalAlignment="Left" Height="128" Margin="176,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" FontFamily="Gill Sans MT" Padding="10" FontSize="16" TextAlignment="Center" Text="An exotic special! ~100% Bangkok meat, our house sauce, and fresh vegetables will have you saying &quot;I want some 'kok in me!&quot;"/>
         <TextBlock HorizontalAlignment="Left" Height="16" Margin="33,595,0,0" TextWrapping="Wrap" Text="Current Total" VerticalAlignment="Top" Width="77" FontFamily="Gill Sans MT"/>
         <GroupBox Header="Customize" HorizontalAlignment="Left" Height="185" Margin="60,283,0,0" VerticalAlignment="Top" Width="256" FontSize="28" FontFamily="Freestyle Script">

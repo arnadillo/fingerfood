@@ -11,13 +11,13 @@
         <Border BorderBrush="Black" BorderThickness="0,1" HorizontalAlignment="Left" Height="181" Margin="0,80,0,0" VerticalAlignment="Top" Width="367">
             <Image Margin="28,22,213,59" Source="bottled-water.jpg"/>
         </Border>
-        <TextBlock x:Name="Sides_Header" HorizontalAlignment="Left" Height="80" TextWrapping="Wrap" Text="Bottled Water" VerticalAlignment="Top" Width="367" TextAlignment="Center" FontFamily="Freestyle Script" FontSize="64" Foreground="Red" OpacityMask="#FFB26666"/>
+        <TextBlock x:Name="Sides_Header" HorizontalAlignment="Left" Height="80" TextWrapping="Wrap" Text="Bottled Water" VerticalAlignment="Top" Width="367" TextAlignment="Center" FontFamily="Freestyle Script" FontSize="48" Foreground="Red" OpacityMask="#FFB26666" Margin="0,18,0,0"/>
         <TextBlock HorizontalAlignment="Left" Height="118" Margin="174,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" FontFamily="Gill Sans MT" Padding="10" FontSize="16" TextAlignment="Center" Text="Quadruple reverse osmosis, triple distilled, and double filtered. Water so clean you won't even taste it"/>
         <TextBlock HorizontalAlignment="Left" Height="16" Margin="33,595,0,0" TextWrapping="Wrap" Text="Current Total" VerticalAlignment="Top" Width="77" FontFamily="Gill Sans MT"/>
 
         <Button x:Name="Current_Cost_Drink" Content="Current Total : $0.00" HorizontalAlignment="Left" Height="63" Margin="0,556,0,0" VerticalAlignment="Top" Width="367" Background="#FFFF2121" BorderBrush="Black" Foreground="White" BorderThickness="0,1" FontSize="24"/>
         <Button Content="Add to order" HorizontalAlignment="Left" Height="41" Margin="60,385,0,0" VerticalAlignment="Top" Width="256" BorderBrush="Black" Background="#FF00AC1F" BorderThickness="2" FontSize="20" Click="Button_Click"/>
-        <TextBlock x:Name="Choco_Sundae_Price" HorizontalAlignment="Left" Height="21" Margin="67,212,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="43" Background="Black" Foreground="White" FontSize="14"><Run Text=" "/><Run Text="$"/><Run Text="1"/><Run Text="."/><Run Text="50"/></TextBlock>
+        <TextBlock x:Name="Choco_Sundae_Price" HorizontalAlignment="Left" Height="21" Margin="67,212,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="43" Background="Black" Foreground="White" FontSize="14"><Run Text=" "/><Run Text="$"/><Run Text="1"/><Run Text="."/><Run Text="49"/></TextBlock>
 
     </Grid>
 </Page>

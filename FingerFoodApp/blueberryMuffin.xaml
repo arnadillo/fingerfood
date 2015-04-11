@@ -12,7 +12,7 @@
             <Image Margin="24,24,217,57" Source="blueberry muffin.jpg"/>
 
         </Border>
-        <TextBlock x:Name="Blueberry_Muffin_Header" HorizontalAlignment="Left" Height="80" TextWrapping="Wrap" Text="Blueberry Muffin" VerticalAlignment="Top" Width="367" TextAlignment="Center" FontFamily="Freestyle Script" FontSize="60" Foreground="Red" OpacityMask="#FFB26666"/>
+        <TextBlock x:Name="Blueberry_Muffin_Header" HorizontalAlignment="Left" Height="80" TextWrapping="Wrap" Text="Blueberry Muffin" VerticalAlignment="Top" Width="367" TextAlignment="Center" FontFamily="Freestyle Script" FontSize="42" Foreground="Red" OpacityMask="#FFB26666" Margin="0,19,0,0"/>
         <TextBlock HorizontalAlignment="Left" Height="81" Margin="175,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" FontFamily="Gill Sans MT" Padding="10" FontSize="16" TextAlignment="Center" Text="We have the same supplier as McDonald's."/>
         <TextBlock HorizontalAlignment="Left" Height="16" Margin="33,595,0,0" TextWrapping="Wrap" Text="Current Total" VerticalAlignment="Top" Width="77" FontFamily="Gill Sans MT"/>
         <GroupBox Header="Customize" HorizontalAlignment="Left" Height="59" Margin="60,334,0,0" VerticalAlignment="Top" Width="256" FontSize="28" FontFamily="Freestyle Script">

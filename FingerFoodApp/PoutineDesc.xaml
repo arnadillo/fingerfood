@@ -12,13 +12,13 @@
             <Image Margin="24,24,217,57" Source="poutine.jpg"/>
 
         </Border>
-        <TextBlock x:Name="Poutine_Header" HorizontalAlignment="Left" Height="80" TextWrapping="Wrap" Text="Poutine" VerticalAlignment="Top" Width="367" TextAlignment="Center" FontFamily="Freestyle Script" FontSize="72" Foreground="Red" OpacityMask="#FFB26666"/>
+        <TextBlock x:Name="Poutine_Header" HorizontalAlignment="Left" Height="80" TextWrapping="Wrap" Text="Poutine" VerticalAlignment="Top" Width="367" TextAlignment="Center" FontFamily="Freestyle Script" FontSize="72" Foreground="Red" OpacityMask="#FFB26666" Margin="0,1,0,0"/>
         <TextBlock HorizontalAlignment="Left" Height="81" Margin="167,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" FontFamily="Gill Sans MT" Padding="10" FontSize="16" TextAlignment="Center" Text="Fries topped with delicious beef gravy, and cheese curds."/>
         <TextBlock HorizontalAlignment="Left" Height="16" Margin="33,595,0,0" TextWrapping="Wrap" Text="Current Total" VerticalAlignment="Top" Width="77" FontFamily="Gill Sans MT"/>
         <GroupBox Header="Customize" HorizontalAlignment="Left" Height="171" Margin="60,280,0,0" VerticalAlignment="Top" Width="256" FontSize="28" FontFamily="Freestyle Script">
             <StackPanel Margin="0,0,0,3">
-                <CheckBox Content="Gravy" FontFamily="Segoe UI" FontSize="14"/>
-                <CheckBox Content="Cheese Curds" FontFamily="Segoe UI" FontSize="14"/>
+                <CheckBox Content="Gravy" FontFamily="Segoe UI" FontSize="14" IsChecked="True"/>
+                <CheckBox Content="Cheese Curds" FontFamily="Segoe UI" FontSize="14" IsChecked="True"/>
                 <CheckBox Content="Salt" FontFamily="Segoe UI" FontSize="14"/>
                 <CheckBox Content="Pepper" FontFamily="Segoe UI" FontSize="14"/>
                 <CheckBox Content="Parmesan Cheese" FontFamily="Segoe UI" FontSize="14"/>
