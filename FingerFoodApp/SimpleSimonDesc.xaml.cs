@@ -37,6 +37,9 @@ namespace FingerFoodApp
             CurrentTotal += 1.99m;
             CurrentTotal = Math.Round(CurrentTotal, 2);
 
+            List<List<string>> currentOrderList = (List<List<string>>)Application.Current.Properties["orderList"];
+            currentOrderList[0].Clear();
+
             Application.Current.Properties["CurrentTotal"] = CurrentTotal;
             ((FirstWindow)System.Windows.Application.Current.MainWindow).Current_Cost.Content = "Current Total: $" + CurrentTotal.ToString();
 
@@ -50,43 +53,24 @@ namespace FingerFoodApp
             bool addLettuce = add_Lettuce.IsChecked.Value;
             bool addTomatoes = add_Tomatoes.IsChecked.Value;
 
-            List<List<string>> currentOrderList = (List<List<string>>)Application.Current.Properties["orderList"];
-            if (addCheddarCheese && addKetchup)
+            bool[] verifyChecked = new bool[] { addCheddarCheese, addKetchup, addMayo, addMustard, addRelish, addBacon, addLettuce, addTomatoes };
+            string[] customStrings = new string[] { "Add Cheese", "Add Ketchup", "Add Mayo", "Add Mustard", "Add Relish", "Add Bacon", "Add Lettuce", "Add Tomatoes"};
+
+            for (int i = 0; i < 8; i++)
             {
-                currentOrderList[0].Add("Add Cheese");
-                currentOrderList[0].Add("Add Ketchup");
-                Application.Current.Properties["orderList"] = currentOrderList;
+                if (verifyChecked[i] == true)
+                {
+                        currentOrderList[0].Add(customStrings[i]);
+                        Application.Current.Properties["orderList"] = currentOrderList;
+                }
 
-                //MessageBox.Show("Add cheese");
-            }
-
-            else if (addKetchup){
-                currentOrderList[0].Add("Add Ketchup");
-                Application.Current.Properties["orderList"] = currentOrderList;
-                //MessageBox.Show("Add Ketchup");
-            }
-
-
-            else if (addCheddarCheese){
-                currentOrderList[0].Add("Add Cheese");
-                Application.Current.Properties["orderList"] = currentOrderList;
+                else
+                {
+                    continue;
+                }
             }
 
 
-            else
-            {
-                currentOrderList[0].Clear();
-                Application.Current.Properties["orderList"] = currentOrderList;
-                //MessageBox.Show("I don't know");
-            }
-
-
-            //List<List<string>> currentOrderList = (List<List<string>>)Application.Current.Properties["orderList"];
-
-            //for (int i = 0; i < 2; i++ )
-            //{
-            //    MessageBox.Show(currentOrderList[0][i].ToString());
-            //}
             if (currentOrderList[0].Count == 0)
             {
                 MessageBox.Show("No Customizations");
@@ -94,7 +78,10 @@ namespace FingerFoodApp
 
             else
             {
-                MessageBox.Show(currentOrderList[0][0].ToString());
+                for (int j = 0; j < currentOrderList[0].Count; j++)
+                {
+                    MessageBox.Show(currentOrderList[0][j].ToString());
+                }
             }
         }
 
