@@ -23,6 +23,12 @@ namespace FingerFoodApp
         public OrderScreen()
         {
             InitializeComponent();
+            TextBlock penis = new TextBlock();
+            penis.Text = "penis";
+            orderList.Children.Add(penis);
+            TextBlock balls = new TextBlock();
+            balls.Text = "balls";
+            orderList.Children.Add(balls);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

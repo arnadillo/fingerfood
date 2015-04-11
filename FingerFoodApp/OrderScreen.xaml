@@ -9,7 +9,6 @@
 
     <Grid>
         <TextBlock x:Name="orderText" TextWrapping="Wrap" Text="Your Order" VerticalAlignment="Top" Margin="72,70,73,0" Height="50" Width="230" Foreground="Red" FontFamily="Freestyle Script" FontSize="48" TextAlignment="Center" HorizontalAlignment="Center"/>
-        <StackPanel x:Name="orderList" HorizontalAlignment="Left" Height="244" Margin="10,120,0,0" VerticalAlignment="Top" Width="355"/>
         <TextBlock x:Name="gstBox" HorizontalAlignment="Left" Height="28" Margin="256,364,0,0" TextWrapping="Wrap" Text="+GST (5%)" VerticalAlignment="Top" Width="109" FontSize="16"/>
         <TextBlock x:Name="totalBox" HorizontalAlignment="Left" Height="41" Margin="243,392,0,0" TextWrapping="Wrap" Text="TOTAL: " VerticalAlignment="Top" Width="122"/>
         <Button x:Name="OrderButton" Content="Send Order" HorizontalAlignment="Left" Height="41" Margin="46,433,0,0" VerticalAlignment="Top" Width="256" BorderBrush="Black" Background="#FF00AC1F" BorderThickness="2" FontSize="20" Click="OrderButton_Click" FontWeight="Bold"/>
@@ -24,14 +23,18 @@
 
             </GroupBox>
         </Canvas>
-        <Canvas x:Name="sentCanvas" HorizontalAlignment="Left" Height="211" Margin="10,417,0,0" VerticalAlignment="Top" Width="355" Visibility="Hidden">
-            <GroupBox Header="Thank you for choosing Finger Food" Height="185" Canvas.Left="9" Canvas.Top="16" Width="336" FontSize="18">
+        <Canvas x:Name="sentCanvas" HorizontalAlignment="Left" Height="211" Margin="10,417,0,0" VerticalAlignment="Top" Width="355">
+            <GroupBox Header="Thank you for choosing Finger Food" Height="133" Canvas.Left="9" Canvas.Top="16" Width="320" FontSize="18">
                 <Grid HorizontalAlignment="Left" Height="145" Margin="0,6,0,0" VerticalAlignment="Top" Width="320">
                     <TextBlock HorizontalAlignment="Left" Height="42" Margin="59,10,0,0" TextWrapping="Wrap" Text="Your order ID is:" VerticalAlignment="Top" Width="207" TextAlignment="Center"/>
                     <TextBlock x:Name="randomNumberBox" Height="65" TextWrapping="Wrap" Text="912413" Width="212" FontWeight="Bold" FontSize="36" TextAlignment="Center"/>
                 </Grid>
             </GroupBox>
         </Canvas>
+        <ScrollViewer HorizontalAlignment="Left" Height="244" Margin="10,120,-20,0" VerticalAlignment="Top" Width="385">
+            <StackPanel x:Name="orderList" Height="439" Width="314"/>
+        </ScrollViewer>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="244" Margin="7,120,0,0" VerticalAlignment="Top" Width="343"/>
 
 
     </Grid>

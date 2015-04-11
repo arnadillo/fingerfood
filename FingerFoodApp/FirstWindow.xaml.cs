@@ -59,6 +59,9 @@ namespace FingerFoodApp
             decimal CurrentTotal = (decimal)Application.Current.Properties["CurrentTotal"];
             Current_Cost.Content = "Current Total: $" + current.ToString();
 
+            TextBlock testicles = new TextBlock();
+            testicles.Text = "testicles are deliciouzzzzzzzz";
+            Receipt.Children.Add(testicles);
             
         }
 
