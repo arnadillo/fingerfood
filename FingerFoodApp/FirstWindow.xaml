@@ -70,7 +70,7 @@
 				</Button.RenderTransform>
 				<i:Interaction.Triggers>
 					<i:EventTrigger EventName="Click">
-						<ei:PlaySoundAction Source="flyby-Conor-1500306612.wav" Volume="1"/>
+						<ei:PlaySoundAction Source="./flyby-Conor-1500306612.wav" Volume="1"/>
 					</i:EventTrigger>
 				</i:Interaction.Triggers>
 			</Button>
