@@ -34,12 +34,16 @@ namespace FingerFoodApp
             navFrame.Content = testPage;
 
             decimal current = Math.Round(0.00m, 2);
+            decimal gst = Math.Round(0.00m,2);
+            decimal actual = Math.Round(0.00m,2);
             List<List<string>> orderList = new List<List<string>>();
 
             Application.Current.Properties["CurrentTotal"] = current;
             Application.Current.Properties["isList"] = false;
             Application.Current.Properties["orderList"] = orderList;
-            
+            Application.Current.Properties["CurrentGST"] = gst;
+            Application.Current.Properties["ActualTotal"] = actual;
+
             // Index 0 : Ordered Burgers
             orderList.Add(new List<string>());
 
@@ -57,11 +61,21 @@ namespace FingerFoodApp
 
             //this.getBackButton.Visibility = Visibility.Visible;
             decimal CurrentTotal = (decimal)Application.Current.Properties["CurrentTotal"];
-            Current_Cost.Content = "Current Total: $" + current.ToString();
+            Current_Cost.Content = "Current Total: $" + CurrentTotal.ToString();
+
+            gstBox.Text = "+GST (5%): $0.00";
+
+            totalBox.Text = "TOTAL: $0.00";
 
             TextBlock testicles = new TextBlock();
             testicles.Text = "testicles are deliciouzzzzzzzz";
             Receipt.Children.Add(testicles);
+
+            TextBlock coxndix = new TextBlock();
+            coxndix.Text = "arnold sux cox n dix";
+            Receipt.Children.Add(coxndix);
+
+
             
         }
 
@@ -123,7 +137,9 @@ namespace FingerFoodApp
             CurrentTotal = Math.Round(CurrentTotal, 2);
 
             Application.Current.Properties["CurrentTotal"] = CurrentTotal;
-            ((FirstWindow)System.Windows.Application.Current.MainWindow).Current_Cost.Content = "Current Total: $" + CurrentTotal.ToString();
+            Current_Cost.Content = "Current Total: $" + CurrentTotal.ToString();
+            gstBox.Text = "+GST (5%): $0.00";
+            totalBox.Text = "TOTAL: $0.00";
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)   //nope button
@@ -142,9 +158,5 @@ namespace FingerFoodApp
             sentCanvas.Visibility = Visibility.Visible;
         }
 
-        private void updateGST()
-        {
-
-        }
     }
 }
