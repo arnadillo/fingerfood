@@ -17,14 +17,14 @@
         <TextBlock HorizontalAlignment="Left" Height="16" Margin="33,595,0,0" TextWrapping="Wrap" Text="Current Total" VerticalAlignment="Top" Width="77" FontFamily="Gill Sans MT"/>
         <GroupBox Header="Customize" HorizontalAlignment="Left" Height="185" Margin="57,276,0,0" VerticalAlignment="Top" Width="256" FontSize="28" FontFamily="Freestyle Script">
             <StackPanel Margin="0,0,0,3">
-                <CheckBox Content="Cheddar Cheese" FontFamily="Segoe UI" FontSize="14"/>
-                <CheckBox Content="Ketchup" FontFamily="Segoe UI" FontSize="14"/>
-                <CheckBox Content="Mayo" FontFamily="Segoe UI" FontSize="14"/>
-                <CheckBox Content="Mustard" FontFamily="Segoe UI" FontSize="14"/>
-                <CheckBox Content="Relish" FontFamily="Segoe UI" FontSize="14"/>
-                <CheckBox Content="Bacon" FontFamily="Segoe UI" FontSize="14"/>
-                <CheckBox Content="Lettuce" FontFamily="Segoe UI" FontSize="14"/>
-                <CheckBox Content="Tomatoes" FontFamily="Segoe UI" FontSize="14"/>
+                <CheckBox x:Name="add_Cheddar_Cheese" Content="Cheddar Cheese" FontFamily="Segoe UI" FontSize="14"/>
+                <CheckBox x:Name="add_Ketchup" Content="Ketchup" FontFamily="Segoe UI" FontSize="14"/>
+                <CheckBox x:Name="add_Mayo" Content="Mayo" FontFamily="Segoe UI" FontSize="14"/>
+                <CheckBox x:Name="add_Mustard" Content="Mustard" FontFamily="Segoe UI" FontSize="14"/>
+                <CheckBox x:Name="add_Relish" Content="Relish" FontFamily="Segoe UI" FontSize="14"/>
+                <CheckBox x:Name="add_Bacon" Content="Bacon" FontFamily="Segoe UI" FontSize="14"/>
+                <CheckBox x:Name="add_Lettuce" Content="Lettuce" FontFamily="Segoe UI" FontSize="14"/>
+                <CheckBox x:Name="add_Tomatoes" Content="Tomatoes" FontFamily="Segoe UI" FontSize="14"/>
             </StackPanel>
         </GroupBox>
 

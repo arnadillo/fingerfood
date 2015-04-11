@@ -39,6 +39,39 @@ namespace FingerFoodApp
 
             Application.Current.Properties["CurrentTotal"] = CurrentTotal;
             ((FirstWindow)System.Windows.Application.Current.MainWindow).Current_Cost.Content = "Current Total: $" + CurrentTotal.ToString();
+
+            // Customization Check for Simple Simon
+            bool addCheddarCheese = add_Cheddar_Cheese.IsChecked.Value;
+            bool addKetchup = add_Ketchup.IsChecked.Value;
+            bool addMayo = add_Mayo.IsChecked.Value;
+            bool addMustard = add_Mustard.IsChecked.Value;
+            bool addRelish = add_Relish.IsChecked.Value;
+            bool addBacon = add_Bacon.IsChecked.Value;
+            bool addLettuce = add_Lettuce.IsChecked.Value;
+            bool addTomatoes = add_Tomatoes.IsChecked.Value;
+
+            List<List<string>> currentOrderList = (List<List<string>>)Application.Current.Properties["orderList"];
+            if (addCheddarCheese)
+            {
+                currentOrderList[0].Add("Add Cheese");
+                Application.Current.Properties["orderList"] = currentOrderList;
+            }
+
+            else if (addKetchup){
+                currentOrderList[0].Add("Add Ketchup");
+                Application.Current.Properties["orderList"] = currentOrderList;
+            }
+
+
+            //List<List<string>> currentOrderList = (List<List<string>>)Application.Current.Properties["orderList"];
+
+            //for (int i = 0; i < 2; i++ )
+            //{
+            //    MessageBox.Show(currentOrderList[0][i].ToString());
+            //}
+
+            MessageBox.Show(currentOrderList[0][0].ToString());
+
         }
 
 

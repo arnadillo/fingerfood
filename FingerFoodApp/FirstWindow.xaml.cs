@@ -21,26 +21,38 @@ namespace FingerFoodApp
     public partial class FirstWindow : Window
     {
         
-
-       
-
         public FirstWindow()
         {
             InitializeComponent();
             MainMenu testPage = new MainMenu();
             // Hiding Back and Menu buttons from main menu
             navHeader.Visibility = Visibility.Hidden;
-            
 
             // Setting the default content for main window
             //navFrame.Navigate(new Uri("MainMenu.xaml", UriKind.Relative));
             navFrame.Content = testPage;
 
             decimal current = Math.Round(0.00m, 2);
+            List<List<string>> orderList = new List<List<string>>();
 
             Application.Current.Properties["CurrentTotal"] = current;
             Application.Current.Properties["isList"] = false;
+            Application.Current.Properties["orderList"] = orderList;
             
+            // Index 0 : Ordered Burgers
+            orderList.Add(new List<string>());
+
+            // Index 1 : Ordered Sides
+            orderList.Add(new List<string>());
+
+            // Index 2 : Ordered Drinks
+            orderList.Add(new List<string>());
+
+            // Index 3 : Ordered Desserts
+            orderList.Add(new List<string>());
+
+            //orderList[0].Add("No cheese");
+            //orderList[0].Add("No Bacon");
 
             //this.getBackButton.Visibility = Visibility.Visible;
             decimal CurrentTotal = (decimal)Application.Current.Properties["CurrentTotal"];
