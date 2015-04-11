@@ -141,5 +141,10 @@ namespace FingerFoodApp
             Confirmation.Visibility = Visibility.Hidden;
             sentCanvas.Visibility = Visibility.Visible;
         }
+
+        private void updateGST()
+        {
+
+        }
     }
 }
