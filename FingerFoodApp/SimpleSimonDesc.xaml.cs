@@ -51,15 +51,33 @@ namespace FingerFoodApp
             bool addTomatoes = add_Tomatoes.IsChecked.Value;
 
             List<List<string>> currentOrderList = (List<List<string>>)Application.Current.Properties["orderList"];
-            if (addCheddarCheese)
+            if (addCheddarCheese && addKetchup)
             {
                 currentOrderList[0].Add("Add Cheese");
+                currentOrderList[0].Add("Add Ketchup");
                 Application.Current.Properties["orderList"] = currentOrderList;
+
+                //MessageBox.Show("Add cheese");
             }
 
             else if (addKetchup){
                 currentOrderList[0].Add("Add Ketchup");
                 Application.Current.Properties["orderList"] = currentOrderList;
+                //MessageBox.Show("Add Ketchup");
+            }
+
+
+            else if (addCheddarCheese){
+                currentOrderList[0].Add("Add Cheese");
+                Application.Current.Properties["orderList"] = currentOrderList;
+            }
+
+
+            else
+            {
+                currentOrderList[0].Clear();
+                Application.Current.Properties["orderList"] = currentOrderList;
+                //MessageBox.Show("I don't know");
             }
 
 
@@ -69,9 +87,15 @@ namespace FingerFoodApp
             //{
             //    MessageBox.Show(currentOrderList[0][i].ToString());
             //}
+            if (currentOrderList[0].Count == 0)
+            {
+                MessageBox.Show("No Customizations");
+            }
 
-            MessageBox.Show(currentOrderList[0][0].ToString());
-
+            else
+            {
+                MessageBox.Show(currentOrderList[0][0].ToString());
+            }
         }
 
 
