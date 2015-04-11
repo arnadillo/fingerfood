@@ -94,7 +94,8 @@ namespace FingerFoodApp
 
         private void Current_Cost_Click(object sender, RoutedEventArgs e)
         {
-
+            navFrame.Navigate(new OrderScreen());
+            Current_Cost.Margin = new Thickness(0, 0, 0, 0);
         }
 
         

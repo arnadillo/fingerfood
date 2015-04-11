@@ -141,6 +141,9 @@
     <Compile Include="OnionRingsDesc.xaml.cs">
       <DependentUpon>OnionRingsDesc.xaml</DependentUpon>
     </Compile>
+    <Compile Include="OrderScreen.xaml.cs">
+      <DependentUpon>OrderScreen.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PopMcgeeDesc.xaml.cs">
       <DependentUpon>PopMcgeeDesc.xaml</DependentUpon>
     </Compile>
@@ -253,6 +256,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="OnionRingsDesc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OrderScreen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
