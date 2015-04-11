@@ -27,13 +27,16 @@ namespace FingerFoodApp
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            float CurrentTotal = (float)Application.Current.Properties["CurrentTotal"];
+            decimal CurrentTotal = (decimal)Application.Current.Properties["CurrentTotal"];
             if (small.IsChecked == true)
-                CurrentTotal += 1.50f;
+                CurrentTotal += 1.49m;
             else if (medium.IsChecked == true)
-                CurrentTotal += 2.00f;
+                CurrentTotal += 1.99m;
             else if (large.IsChecked == true)
-                CurrentTotal += 2.50f;
+                CurrentTotal += 2.49m;
+
+            CurrentTotal = Math.Round(CurrentTotal, 2);
+
             Application.Current.Properties["CurrentTotal"] = CurrentTotal;
             ((FirstWindow)System.Windows.Application.Current.MainWindow).Current_Cost.Content = "Current Total: $" + CurrentTotal.ToString();
         }

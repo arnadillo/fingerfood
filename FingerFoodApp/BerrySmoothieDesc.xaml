@@ -16,9 +16,9 @@
         <TextBlock HorizontalAlignment="Left" Height="16" Margin="33,595,0,0" TextWrapping="Wrap" Text="Current Total" VerticalAlignment="Top" Width="77" FontFamily="Gill Sans MT"/>
         <GroupBox Header="Choose A Size" HorizontalAlignment="Left" Height="109" Margin="60,300,0,0" VerticalAlignment="Top" Width="256" FontSize="28" FontFamily="Freestyle Script">
             <StackPanel Margin="0,0,0,3">
-                <RadioButton Content="Small                          $2.50" FontFamily="Segoe UI" FontSize="16"/>
-                <RadioButton Content="Medium                     $4.00" FontFamily="Segoe UI" FontSize="16"/>
-                <RadioButton Content="Large                         $6.50" FontSize="16" FontFamily="Segoe UI"/>
+                <RadioButton x:Name="small" Content="Small                          $2.49" FontFamily="Segoe UI" FontSize="16"/>
+                <RadioButton x:Name="medium" Content="Medium                     $3.99" FontFamily="Segoe UI" FontSize="16" IsChecked="True"/>
+                <RadioButton x:Name="large" Content="Large                         $6.49" FontSize="16" FontFamily="Segoe UI"/>
             </StackPanel>
         </GroupBox>
 

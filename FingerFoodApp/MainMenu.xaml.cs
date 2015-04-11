@@ -32,11 +32,6 @@ namespace FingerFoodApp
             InitializeComponent();
         }
 
-        public MainMenu()
-        {
-            InitializeComponent();
-        }
-
         private void Burgers_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new BurgersList());
@@ -44,17 +39,17 @@ namespace FingerFoodApp
 
         private void Desserts_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(dessertsList);
+            this.NavigationService.Navigate(new DessertsList());
         }
 
         private void Sides_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(sidesList);
+            this.NavigationService.Navigate(new SidesList());
         }
 
         private void Drinks_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(drinksList);
+            this.NavigationService.Navigate(new DrinksList());
         }
 
         private void burgers_imgPressed(object sender, MouseButtonEventArgs e)

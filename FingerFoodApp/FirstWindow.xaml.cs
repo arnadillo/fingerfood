@@ -36,21 +36,17 @@ namespace FingerFoodApp
             //navFrame.Navigate(new Uri("MainMenu.xaml", UriKind.Relative));
             navFrame.Content = testPage;
 
-            Application.Current.Properties["CurrentTotal"] = 0.0f;
+            decimal current = Math.Round(0.00m, 2);
+
+            Application.Current.Properties["CurrentTotal"] = current;
             Application.Current.Properties["isList"] = false;
             
 
             //this.getBackButton.Visibility = Visibility.Visible;
-            float CurrentTotal = (float)Application.Current.Properties["CurrentTotal"];
-            Current_Cost.Content = "Current Total: $" + CurrentTotal.ToString();
+            decimal CurrentTotal = (decimal)Application.Current.Properties["CurrentTotal"];
+            Current_Cost.Content = "Current Total: $" + current.ToString();
 
             
-        }
-
-        public void updateTotal()
-        {
-            float CurrentTotal = (float)Application.Current.Properties["CurrentTotal"];
-            Current_Cost.Content = "Current Total: $" + CurrentTotal.ToString();
         }
 
         public Button getBackButton { get { return Back_Button; } }
