@@ -45,14 +45,20 @@ namespace FingerFoodApp
             ((FirstWindow)System.Windows.Application.Current.MainWindow).Current_Cost.Content = "Current Total: $" + CurrentTotal.ToString();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Button_Click_1(object sender, RoutedEventArgs e)   //nope button
         {
             Confirmation.Visibility = Visibility.Hidden;
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void Button_Click_2(object sender, RoutedEventArgs e)   //feed me button
         {
-            //go to new canvas
+            var bc = new BrushConverter();
+            ((FirstWindow)System.Windows.Application.Current.MainWindow).Current_Cost.Background = (Brush)bc.ConvertFrom("#FF00AC1F");
+            ((FirstWindow)System.Windows.Application.Current.MainWindow).Current_Cost.Content = "Order sent!";
+            OrderButton.Visibility = Visibility.Hidden;
+            CancelButton.Visibility = Visibility.Hidden;
+            Confirmation.Visibility = Visibility.Hidden;
+            sentCanvas.Visibility = Visibility.Visible;
         }
     }
 }
