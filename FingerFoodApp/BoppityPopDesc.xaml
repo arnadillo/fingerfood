@@ -13,7 +13,6 @@
         </Border>
         <TextBlock x:Name="Sides_Header" HorizontalAlignment="Left" Height="80" TextWrapping="Wrap" Text="Boppity Pop" VerticalAlignment="Top" Width="367" TextAlignment="Center" FontFamily="Freestyle Script" FontSize="64" Foreground="Red" OpacityMask="#FFB26666"/>
         <TextBlock HorizontalAlignment="Left" Height="137" Margin="172,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" FontFamily="Gill Sans MT" Padding="10" FontSize="16" TextAlignment="Center"><Run Text="Pull it, "/><LineBreak/><Run Text="twist it,"/><LineBreak/><Run Text="bop it!"/><LineBreak/><Run Text="Now drinkable!"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Height="16" Margin="33,595,0,0" TextWrapping="Wrap" Text="Current Total" VerticalAlignment="Top" Width="77" FontFamily="Gill Sans MT"/>
         <GroupBox Header="Choose A Size" HorizontalAlignment="Left" Height="109" Margin="60,277,0,0" VerticalAlignment="Top" Width="256" FontSize="28" FontFamily="Freestyle Script">
             <StackPanel Margin="0,0,0,3">
                 <RadioButton x:Name="small" Content="Small                          $1.49" FontFamily="Segoe UI" FontSize="16"/>
@@ -26,8 +25,6 @@
                 <CheckBox Content="Ice" FontFamily="Segoe UI" FontSize="14"/>
             </StackPanel>
         </GroupBox>
-
-        <Button x:Name="Current_Cost_Drink" Content="Current Total : $0.00" HorizontalAlignment="Left" Height="63" Margin="0,556,0,0" VerticalAlignment="Top" Width="367" Background="#FFFF2121" BorderBrush="Black" Foreground="White" BorderThickness="0,1" FontSize="24"/>
         <Button Content="Add to order" HorizontalAlignment="Left" Height="41" Margin="60,492,0,0" VerticalAlignment="Top" Width="256" BorderBrush="Black" Background="#FF00AC1F" BorderThickness="2" FontSize="20" Click="Button_Click"/>
     </Grid>
 </Page>

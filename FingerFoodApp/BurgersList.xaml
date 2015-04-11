@@ -34,6 +34,5 @@
             </Grid>
         </ScrollViewer>
         <TextBlock x:Name="Burgers_Text" HorizontalAlignment="Left" Height="80" TextWrapping="Wrap" Text="Burgers" VerticalAlignment="Top" Width="367" TextAlignment="Center" FontFamily="Freestyle Script" FontSize="72" Foreground="Red" OpacityMask="#FFB26666"/>
-        <Button x:Name="Current_Cost" Content="Current Total : $0.00" HorizontalAlignment="Left" Height="63" Margin="0,556,0,0" VerticalAlignment="Top" Width="367" Background="#FFFF2121" BorderBrush="Black" Foreground="White" BorderThickness="0,1" FontSize="24"/>
     </Grid>
 </Page>

@@ -14,7 +14,6 @@
         </Border>
         <TextBlock x:Name="Onion_Rings_Header" HorizontalAlignment="Left" Height="80" TextWrapping="Wrap" Text="Onion Rings" VerticalAlignment="Top" Width="367" TextAlignment="Center" FontFamily="Freestyle Script" FontSize="60" Foreground="Red" OpacityMask="#FFB26666" Margin="0,9,0,0"/>
         <TextBlock HorizontalAlignment="Left" Height="81" Margin="167,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" FontFamily="Gill Sans MT" Padding="10" FontSize="16" TextAlignment="Center" Text="Onions shaped like rings and deep fried in 10 day old oil."/>
-        <TextBlock HorizontalAlignment="Left" Height="16" Margin="33,595,0,0" TextWrapping="Wrap" Text="Current Total" VerticalAlignment="Top" Width="77" FontFamily="Gill Sans MT"/>
         <GroupBox Header="Customize" HorizontalAlignment="Left" Height="131" Margin="60,294,0,0" VerticalAlignment="Top" Width="256" FontSize="28" FontFamily="Freestyle Script">
             <StackPanel Margin="0,0,0,3">
                 <CheckBox Content="Gravy" FontFamily="Segoe UI" FontSize="14"/>
@@ -24,8 +23,6 @@
                 <CheckBox Content="Pepper" FontFamily="Segoe UI" FontSize="14"/>
             </StackPanel>
         </GroupBox>
-
-        <Button x:Name="Current_Cost_Drink" Content="Current Total : $0.00" HorizontalAlignment="Left" Height="63" Margin="0,556,0,0" VerticalAlignment="Top" Width="367" Background="#FFFF2121" BorderBrush="Black" Foreground="White" BorderThickness="0,1" FontSize="24"/>
         <Button Content="Add to order" HorizontalAlignment="Left" Height="41" Margin="60,470,0,0" VerticalAlignment="Top" Width="256" BorderBrush="Black" Background="#FF00AC1F" BorderThickness="2" FontSize="20" Click="Button_Click"/>
         <TextBlock x:Name="Choco_Sundae_Price" HorizontalAlignment="Left" Height="21" Margin="67,212,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="43" Background="Black" Foreground="White" FontSize="14"><Run Text=" "/><Run Text="$"/><Run Text="2"/><Run Text="."/><Run Text="9"/><Run Text="9"/></TextBlock>
 
