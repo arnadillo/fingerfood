@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Media.Animation;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Threading.Tasks;
+
 
 namespace FingerFoodApp
 {
@@ -120,11 +122,13 @@ namespace FingerFoodApp
                 Storyboard viewTotalSB = (Storyboard)FindResource("viewTotal");
                 viewTotalSB.Begin(this);
                 viewTotalFlag = true;
+                
             }
             else {
                 Storyboard viewTotalSB = (Storyboard)FindResource("viewTotal_rev");
                 viewTotalSB.Begin(this);
-                viewTotalFlag = false;
+                viewTotalFlag = false;          
+                
             }
         }
 
