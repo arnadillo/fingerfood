@@ -80,7 +80,7 @@ namespace FingerFoodApp
                 }
             }
 
-            decimal GST = CurrentTotal * 0.15m;
+            decimal GST = CurrentTotal * 0.05m;
             GST = Math.Round(GST, 2);
 
             decimal ActualTotal = CurrentTotal + GST;

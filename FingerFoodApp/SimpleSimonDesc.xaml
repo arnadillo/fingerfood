@@ -27,7 +27,7 @@
             </StackPanel>
         </GroupBox>
 
-        <TextBlock x:Name="Simple_Simon_Price" HorizontalAlignment="Left" Height="21" Margin="67,212,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="43" Background="Black" Foreground="White" FontSize="14" Text="1.99"/>
+        <TextBlock x:Name="Simple_Simon_Price" HorizontalAlignment="Left" Height="21" Margin="67,212,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="43" Background="Black" Foreground="White" FontSize="14" Text="$1.99" TextAlignment="Center"/>
         <Button Content="Make It A Meal" HorizontalAlignment="Left" Height="41" Margin="10,480,0,0" VerticalAlignment="Top" Width="165" BorderBrush="Black" Background="#FFE8FF00" BorderThickness="2" FontSize="20"/>
         <Button x:Name="Add_To_Order" Content="Add to order" HorizontalAlignment="Left" Height="41" Margin="186,480,0,0" VerticalAlignment="Top" Width="165" BorderBrush="Black" Background="#FF00AC1F" BorderThickness="2" FontSize="20" Click="Add_To_Order_Click"/>
     </Grid>
