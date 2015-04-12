@@ -27,9 +27,10 @@ namespace FingerFoodApp
             int isMenu = (int)Application.Current.Properties["counter"];
             isMenu++;
             Application.Current.Properties["counter"] = isMenu;
+ 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Add_To_Order_Click(object sender, RoutedEventArgs e)
         {
             decimal CurrentTotal = (decimal)Application.Current.Properties["CurrentTotal"];
             if (small.IsChecked == true)
@@ -38,6 +39,47 @@ namespace FingerFoodApp
                 CurrentTotal += 1.99m;
             else if (large.IsChecked == true)
                 CurrentTotal += 2.49m;
+
+            List<List<string>> currentOrderList = (List<List<string>>)Application.Current.Properties["orderList"];
+            currentOrderList[2].Clear();
+
+            bool smallDrink = small.IsChecked.Value;
+            bool mediumDrink = medium.IsChecked.Value;
+            bool largeDrink = large.IsChecked.Value;
+            bool noIce = Ice.IsChecked.Value;
+
+            bool[] verifyChecked = new bool[] { smallDrink, mediumDrink, largeDrink, !noIce };
+            string[] customStrings = new string[] { "\tSmall Sized", "\tMedium Sized", "\tLarge Sized", "\tNo Ice" };
+
+            if (small.IsChecked == true)
+                currentOrderList[2].Add("\n\u2022 Boppity Pop\t\t\t\t\t $1.49");
+            else if (medium.IsChecked == true)
+                currentOrderList[2].Add("\n\u2022 Boppity Pop\t\t\t\t\t $1.99");
+            else if (large.IsChecked == true)
+                currentOrderList[2].Add("\n\u2022 Boppity Pop\t\t\t\t\t $2.49");
+
+            TextBlock orderOutput = new TextBlock();
+            orderOutput.FontWeight = FontWeights.Bold;
+            orderOutput.Text = currentOrderList[2][0].ToString();
+            ((FirstWindow)System.Windows.Application.Current.MainWindow).Receipt.Children.Add(orderOutput);
+
+            for (int i = 0; i < 4; i++)
+            {
+                if (verifyChecked[i] == true)
+                {
+                    currentOrderList[2].Add(customStrings[i]);
+                    TextBlock customOutput = new TextBlock();
+                    customOutput.Text = customStrings[i];
+                    ((FirstWindow)System.Windows.Application.Current.MainWindow).Receipt.Children.Add(customOutput);
+                    Application.Current.Properties["orderList"] = currentOrderList;
+
+                }
+
+                else
+                {
+                    continue;
+                }
+            }
 
             CurrentTotal = Math.Round(CurrentTotal, 2);
 
@@ -52,6 +94,7 @@ namespace FingerFoodApp
 
             ((FirstWindow)System.Windows.Application.Current.MainWindow).gstBox.Text = "+GST (5%): $" + GST;
             ((FirstWindow)System.Windows.Application.Current.MainWindow).totalBox.Text = "TOTAL: $" + ActualTotal;
+
         }
     }
 }
