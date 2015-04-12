@@ -67,15 +67,6 @@ namespace FingerFoodApp
 
             totalBox.Text = "TOTAL: $0.00";
 
-            TextBlock testicles = new TextBlock();
-            testicles.Text = "testicles are deliciouzzzzzzzz";
-            Receipt.Children.Add(testicles);
-
-            TextBlock coxndix = new TextBlock();
-            coxndix.Text = "arnold sux cox n dix";
-            Receipt.Children.Add(coxndix);
-
-
             
         }
 
@@ -140,6 +131,8 @@ namespace FingerFoodApp
             Current_Cost.Content = "Current Total: $" + CurrentTotal.ToString();
             gstBox.Text = "+GST (5%): $0.00";
             totalBox.Text = "TOTAL: $0.00";
+
+            Receipt.Children.Clear();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)   //nope button

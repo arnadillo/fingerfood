@@ -23,7 +23,7 @@ namespace FingerFoodApp
 
         //CustomerCart total;
 
-       // FirstWindow update = new FirstWindow();
+        // FirstWindow update = new FirstWindow();
 
         public SimpleSimonDesc()
         {
@@ -54,14 +54,24 @@ namespace FingerFoodApp
             bool addTomatoes = add_Tomatoes.IsChecked.Value;
 
             bool[] verifyChecked = new bool[] { addCheddarCheese, addKetchup, addMayo, addMustard, addRelish, addBacon, addLettuce, addTomatoes };
-            string[] customStrings = new string[] { "Add Cheese", "Add Ketchup", "Add Mayo", "Add Mustard", "Add Relish", "Add Bacon", "Add Lettuce", "Add Tomatoes"};
+            string[] customStrings = new string[] { "\tAdd Cheese", "\tAdd Ketchup", "\tAdd Mayo", "\tAdd Mustard", "\tAdd Relish", "\tAdd Bacon", "\tAdd Lettuce", "\tAdd Tomatoes" };
+
+            currentOrderList[0].Add("\bSimple Simon");
+            TextBlock orderOutput = new TextBlock();
+            //orderOutput.FontWeight = FontWeight.Bold;
+            orderOutput.Text = currentOrderList[0][0].ToString();
+            ((FirstWindow)System.Windows.Application.Current.MainWindow).Receipt.Children.Add(orderOutput);
 
             for (int i = 0; i < 8; i++)
             {
                 if (verifyChecked[i] == true)
                 {
-                        currentOrderList[0].Add(customStrings[i]);
-                        Application.Current.Properties["orderList"] = currentOrderList;
+                    currentOrderList[0].Add(customStrings[i]);
+                    TextBlock customOutput = new TextBlock();
+                    customOutput.Text = customStrings[i];
+                    ((FirstWindow)System.Windows.Application.Current.MainWindow).Receipt.Children.Add(customOutput);
+                    Application.Current.Properties["orderList"] = currentOrderList;
+                    
                 }
 
                 else
@@ -71,14 +81,14 @@ namespace FingerFoodApp
             }
 
 
-            if (currentOrderList[0].Count == 0)
+            if (currentOrderList[0].Count <= 1)
             {
                 MessageBox.Show("No Customizations");
             }
 
             else
             {
-                for (int j = 0; j < currentOrderList[0].Count; j++)
+                for (int j = 1; j < currentOrderList[0].Count; j++)
                 {
                     MessageBox.Show(currentOrderList[0][j].ToString());
                 }
