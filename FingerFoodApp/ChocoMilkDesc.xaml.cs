@@ -40,6 +40,15 @@ namespace FingerFoodApp
             Application.Current.Properties["CurrentTotal"] = CurrentTotal;
             ((FirstWindow)System.Windows.Application.Current.MainWindow).Current_Cost.Content = "Current Total: $" + CurrentTotal.ToString();
 
+            decimal GST = CurrentTotal * 0.15m;
+            GST = Math.Round(GST, 2);
+
+            decimal ActualTotal = CurrentTotal + GST;
+            ActualTotal = Math.Round(ActualTotal, 2);
+
+            ((FirstWindow)System.Windows.Application.Current.MainWindow).gstBox.Text = "+GST (5%): $" + GST;
+            ((FirstWindow)System.Windows.Application.Current.MainWindow).totalBox.Text = "TOTAL: $" + ActualTotal;
+
         }
     }
 }

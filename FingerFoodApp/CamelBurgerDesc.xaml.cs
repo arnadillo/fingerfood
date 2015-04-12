@@ -31,17 +31,17 @@ namespace FingerFoodApp
             CurrentTotal += 7.99m;
             CurrentTotal = Math.Round(CurrentTotal, 2);
 
+            Application.Current.Properties["CurrentTotal"] = CurrentTotal;
+            ((FirstWindow)System.Windows.Application.Current.MainWindow).Current_Cost.Content = "Current Total: $" + CurrentTotal.ToString();
+
             decimal GST = CurrentTotal * 0.15m;
             GST = Math.Round(GST, 2);
 
             decimal ActualTotal = CurrentTotal + GST;
             ActualTotal = Math.Round(ActualTotal, 2);
 
-            Application.Current.Properties["CurrentTotal"] = CurrentTotal;
-            ((FirstWindow)System.Windows.Application.Current.MainWindow).Current_Cost.Content = "Current Total: $" + CurrentTotal.ToString();
-            ((FirstWindow)System.Windows.Application.Current.MainWindow).gstBox.Text = "+GST (5%): " + GST;
-            ((FirstWindow)System.Windows.Application.Current.MainWindow).totalBox.Text = "TOTAL: " + ActualTotal;
-
+            ((FirstWindow)System.Windows.Application.Current.MainWindow).gstBox.Text = "+GST (5%): $" + GST;
+            ((FirstWindow)System.Windows.Application.Current.MainWindow).totalBox.Text = "TOTAL: $" + ActualTotal;
 
         }
     }
