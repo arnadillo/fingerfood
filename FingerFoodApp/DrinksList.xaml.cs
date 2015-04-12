@@ -25,6 +25,11 @@ namespace FingerFoodApp
         {
             InitializeComponent();
             ((FirstWindow)System.Windows.Application.Current.MainWindow).navHeader.Visibility = Visibility.Visible;
+
+            int isMenu = (int)Application.Current.Properties["counter"];
+            isMenu++;
+            Application.Current.Properties["counter"] = isMenu;
+
         }
 
         private void Boppity_Pop_Click(object sender, RoutedEventArgs e)

@@ -21,11 +21,6 @@ namespace FingerFoodApp
     /// </summary>
     public partial class MainMenu : Page
     {
-        
-        //BurgersList burgersList = new BurgersList();
-        DrinksList drinksList = new DrinksList();
-        DessertsList dessertsList = new DessertsList();
-        SidesList sidesList = new SidesList();
 
         public MainMenu()
         {

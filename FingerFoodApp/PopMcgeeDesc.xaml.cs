@@ -23,15 +23,33 @@ namespace FingerFoodApp
         public PopMcgeeDesc()
         {
             InitializeComponent();
+
+            int isMenu = (int)Application.Current.Properties["counter"];
+            isMenu++;
+            Application.Current.Properties["counter"] = isMenu;
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
+            TextBlock popname = new TextBlock();
+            popname.Text = "PopMcGee";
+            popname.FontWeight = FontWeights.ExtraBlack;
+            ((FirstWindow)System.Windows.Application.Current.MainWindow).Receipt.Children.Add(popname);
+
             decimal CurrentTotal = (decimal)Application.Current.Properties["CurrentTotal"];
             if (small.IsChecked == true)
                 CurrentTotal += 1.49m;
             else if (medium.IsChecked == true)
+            {
                 CurrentTotal += 1.99m;
+
+                TextBlock mediumtext = new TextBlock();
+                mediumtext.Text = "\tMedium";
+
+                ((FirstWindow)System.Windows.Application.Current.MainWindow).Receipt.Children.Add(mediumtext);
+            }
             else if (large.IsChecked == true)
                 CurrentTotal += 2.49m;
 

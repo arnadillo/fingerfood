@@ -20,17 +20,14 @@ namespace FingerFoodApp
     /// </summary>
     public partial class SidesList : Page
     {
-
-        FriesDesc fries = new FriesDesc();
-        PoutineDesc poutine = new PoutineDesc();
-        OnionRingsDesc onionRings = new OnionRingsDesc();
-        HashbrownDesc hashbrown = new HashbrownDesc();
-        blueberryMuffin blueberryMuffin = new blueberryMuffin();
-
         public SidesList()
         {
             InitializeComponent();
             ((FirstWindow)System.Windows.Application.Current.MainWindow).navHeader.Visibility = Visibility.Visible;
+
+            int isMenu = (int)Application.Current.Properties["counter"];
+            isMenu++;
+            Application.Current.Properties["counter"] = isMenu;
         }
 
         private void Fries_Click(object sender, RoutedEventArgs e)
@@ -55,7 +52,7 @@ namespace FingerFoodApp
 
         private void Blueberry_Muffin_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(blueberryMuffin);
+            this.NavigationService.Navigate(new blueberryMuffin());
         }
     }
 }

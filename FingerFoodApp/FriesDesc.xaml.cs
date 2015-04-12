@@ -23,6 +23,10 @@ namespace FingerFoodApp
         public FriesDesc()
         {
             InitializeComponent();
+
+            int isMenu = (int)Application.Current.Properties["counter"];
+            isMenu++;
+            Application.Current.Properties["counter"] = isMenu;
         }
 
         private void Add_To_Order_Clicked(object sender, RoutedEventArgs e)
