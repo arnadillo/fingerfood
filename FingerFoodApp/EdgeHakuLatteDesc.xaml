@@ -1,33 +1,40 @@
-﻿<Page x:Class="FingerFoodApp.EdgeHakuLatteDesc"
+﻿<Page
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" x:Class="FingerFoodApp.EdgeHakuLatteDesc" 
       mc:Ignorable="d" 
       d:DesignHeight="650" d:DesignWidth="375"
 	Title="EdgeHakuLatteDesc">
 
-    <Grid>
-        <Border BorderBrush="Black" BorderThickness="0,1" HorizontalAlignment="Left" Height="181" Margin="0,80,0,0" VerticalAlignment="Top" Width="367">
-            <Image Margin="29,41,212,40" Source="edge haku latte.jpg"/>
-        </Border>
-        <TextBlock x:Name="Edge_Haku_Header" HorizontalAlignment="Left" Height="80" TextWrapping="Wrap" Text="Edge Haku Latte" VerticalAlignment="Top" Width="367" TextAlignment="Center" FontFamily="Freestyle Script" FontSize="40" Foreground="Red" OpacityMask="#FFB26666" Margin="0,20,0,0"/>
-        <TextBlock HorizontalAlignment="Left" Height="118" Margin="174,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" FontFamily="Gill Sans MT" Padding="10" FontSize="16" TextAlignment="Center" Text="Our speciality latte. Two shots of espresso and steamed milk."/>
-        <GroupBox Header="Choose A Size" HorizontalAlignment="Left" Height="109" Margin="60,266,0,0" VerticalAlignment="Top" Width="256" FontSize="28" FontFamily="Freestyle Script">
-            <StackPanel Margin="0,0,0,3">
-                <RadioButton x:Name="small" Content="Small                          $3.49" FontFamily="Segoe UI" FontSize="16"/>
-                <RadioButton x:Name="medium" Content="Medium                     $4.99" FontFamily="Segoe UI" FontSize="16"/>
-                <RadioButton x:Name="large" Content="Large                         $7.49" FontSize="16" FontFamily="Segoe UI"/>
-            </StackPanel>
-        </GroupBox>
-        <GroupBox Header="Customize" HorizontalAlignment="Left" Height="99" Margin="60,375,0,0" VerticalAlignment="Top" Width="256" FontSize="28" FontFamily="Freestyle Script">
-            <StackPanel Margin="0,0,0,3">
-                <CheckBox Content="Sugar" FontFamily="Segoe UI" FontSize="14"/>
-                <CheckBox Content="Cream" FontFamily="Segoe UI" FontSize="14"/>
-                <CheckBox Content="Arnold's Man Milk" FontFamily="Segoe UI" FontSize="14"/>
-            </StackPanel>
-        </GroupBox>
-        <Button Content="Add to order" HorizontalAlignment="Left" Height="41" Margin="60,492,0,0" VerticalAlignment="Top" Width="256" BorderBrush="Black" Background="#FF00AC1F" BorderThickness="2" FontSize="20" Click="Button_Click"/>
+	<Grid>
+		<Border BorderBrush="Black" BorderThickness="0,1" HorizontalAlignment="Left" Height="181" Margin="0,80,0,0" VerticalAlignment="Top" Width="367">
+			<Image Margin="29,41,212,40" Source="edge haku latte.jpg"/>
+		</Border>
+		<TextBlock x:Name="Edge_Haku_Header" HorizontalAlignment="Left" Height="80" TextWrapping="Wrap" Text="Edge Haku Latte" VerticalAlignment="Top" Width="367" TextAlignment="Center" FontFamily="Freestyle Script" FontSize="40" Foreground="Red" OpacityMask="#FFB26666" Margin="0,20,0,0"/>
+		<TextBlock HorizontalAlignment="Left" Height="118" Margin="174,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" FontFamily="Gill Sans MT" Padding="10" FontSize="16" TextAlignment="Center" Text="Our speciality latte. Two shots of espresso and steamed milk."/>
+		<GroupBox Header="Choose A Size" HorizontalAlignment="Left" Height="109" Margin="60,266,0,0" VerticalAlignment="Top" Width="256" FontSize="28" FontFamily="Freestyle Script">
+			<StackPanel Margin="0,0,0,3">
+				<RadioButton x:Name="small" Content="Small                          $3.49" FontFamily="Segoe UI" FontSize="16"/>
+				<RadioButton x:Name="medium" Content="Medium                     $4.99" FontFamily="Segoe UI" FontSize="16"/>
+				<RadioButton x:Name="large" Content="Large                         $7.49" FontSize="16" FontFamily="Segoe UI"/>
+			</StackPanel>
+		</GroupBox>
+		<GroupBox Header="Customize" HorizontalAlignment="Left" Height="99" Margin="60,375,0,0" VerticalAlignment="Top" Width="256" FontSize="28" FontFamily="Freestyle Script">
+			<StackPanel Margin="0,0,0,3">
+				<CheckBox Content="Sugar" FontFamily="Segoe UI" FontSize="14"/>
+				<CheckBox Content="Cream" FontFamily="Segoe UI" FontSize="14"/>
+				<CheckBox Content="Arnold's Man Milk" FontFamily="Segoe UI" FontSize="14"/>
+			</StackPanel>
+		</GroupBox>
+		<Button Content="Add to order" HorizontalAlignment="Left" Height="41" Margin="60,492,0,0" VerticalAlignment="Top" Width="256" BorderBrush="Black" Background="#FF00AC1F" BorderThickness="2" FontSize="20" Click="Button_Click">
+			<i:Interaction.Triggers>
+				<i:EventTrigger EventName="Click">
+					<ei:PlaySoundAction Source="Gag-SoundBible.com-902499121.wav" Volume="1"/>
+				</i:EventTrigger>
+			</i:Interaction.Triggers>
+		</Button>
 
-    </Grid>
+	</Grid>
 </Page>
