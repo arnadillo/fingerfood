@@ -22,9 +22,9 @@
         </GroupBox>
         <GroupBox Header="Ice" HorizontalAlignment="Left" Height="61" Margin="60,391,0,0" VerticalAlignment="Top" Width="256" FontSize="28" FontFamily="Freestyle Script">
             <StackPanel Margin="0,0,0,3">
-                <CheckBox Content="Ice" FontFamily="Segoe UI" FontSize="14"/>
+                <CheckBox x:Name="Ice" Content="Ice" FontFamily="Segoe UI" FontSize="14" IsChecked="True"/>
             </StackPanel>
         </GroupBox>
-        <Button Content="Add to order" HorizontalAlignment="Left" Height="41" Margin="60,492,0,0" VerticalAlignment="Top" Width="256" BorderBrush="Black" Background="#FF00AC1F" BorderThickness="2" FontSize="20" Click="Button_Click"/>
+        <Button Content="Add to order" HorizontalAlignment="Left" Height="41" Margin="60,492,0,0" VerticalAlignment="Top" Width="256" BorderBrush="Black" Background="#FF00AC1F" BorderThickness="2" FontSize="20" Click="Add_To_Order_Click"/>
     </Grid>
 </Page>

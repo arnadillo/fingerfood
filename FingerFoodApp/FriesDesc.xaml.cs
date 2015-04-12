@@ -47,7 +47,8 @@ namespace FingerFoodApp
             bool[] verifyChecked = new bool[] { addKetchup, addMayo, addSalt, addPepper, addParmesanCheese };
             string[] customStrings = new string[] { "\tAdd Ketchup", "\tAdd Mayo", "\tExtra Salt", "\tAdd Pepper", "\tAdd Parmesan Cheese" };
 
-            currentOrderList[1].Add("\u2022 Fries");
+            currentOrderList[1].Add("\n\u2022 Fries\t\t\t\t\t\t $1.99");
+
             TextBlock orderOutput = new TextBlock();
             orderOutput.FontWeight = FontWeights.Bold;
             orderOutput.Text = currentOrderList[1][0].ToString();
