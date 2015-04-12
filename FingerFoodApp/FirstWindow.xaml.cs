@@ -41,8 +41,7 @@ namespace FingerFoodApp
             Application.Current.Properties["CurrentTotal"] = current;
             Application.Current.Properties["isList"] = false;
             Application.Current.Properties["orderList"] = orderList;
-            Application.Current.Properties["CurrentGST"] = gst;
-            Application.Current.Properties["ActualTotal"] = actual;
+
 
             // Index 0 : Ordered Burgers
             orderList.Add(new List<string>());
@@ -66,6 +65,7 @@ namespace FingerFoodApp
             gstBox.Text = "+GST (5%): $0.00";
 
             totalBox.Text = "TOTAL: $0.00";
+
 
             
         }
