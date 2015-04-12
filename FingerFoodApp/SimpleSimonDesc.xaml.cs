@@ -80,19 +80,16 @@ namespace FingerFoodApp
                 }
             }
 
+            decimal GST = CurrentTotal * 0.15m;
+            GST = Math.Round(GST, 2);
 
-            if (currentOrderList[0].Count <= 1)
-            {
-                MessageBox.Show("No Customizations");
-            }
+            decimal ActualTotal = CurrentTotal + GST;
+            ActualTotal = Math.Round(ActualTotal, 2);
 
-            else
-            {
-                for (int j = 1; j < currentOrderList[0].Count; j++)
-                {
-                    MessageBox.Show(currentOrderList[0][j].ToString());
-                }
-            }
+            ((FirstWindow)System.Windows.Application.Current.MainWindow).gstBox.Text = "+GST (5%): $" + GST;
+            ((FirstWindow)System.Windows.Application.Current.MainWindow).totalBox.Text = "TOTAL: $" + ActualTotal;
+
+
         }
 
 
