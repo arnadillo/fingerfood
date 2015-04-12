@@ -24,7 +24,11 @@ namespace FingerFoodApp
         public SimpleSimonDesc()
         {
             InitializeComponent();
-            Application.Current.Properties["isList"] = false;
+
+            int isMenu = (int)Application.Current.Properties["counter"];
+            isMenu++;
+            Application.Current.Properties["counter"] = isMenu;
+
         }
 
         private void Add_To_Order_Click(object sender, RoutedEventArgs e)

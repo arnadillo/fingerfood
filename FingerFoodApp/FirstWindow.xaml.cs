@@ -42,6 +42,8 @@ namespace FingerFoodApp
             Application.Current.Properties["isList"] = false;
             Application.Current.Properties["orderList"] = orderList;
 
+            int pageCounter = 0;
+            Application.Current.Properties["counter"] = pageCounter;
 
             // Index 0 : Ordered Burgers
             orderList.Add(new List<string>());
@@ -81,14 +83,21 @@ namespace FingerFoodApp
 
         private void Back_Clicked(object sender, RoutedEventArgs e)
         {
-            if (navFrame.CanGoBack == true && (Boolean)Application.Current.Properties["isList"])
+
+            int isMenu = (int)Application.Current.Properties["counter"];
+            
+            if (isMenu == 1)
             {
                 navFrame.GoBack();
-                //navHeader.Visibility = Visibility.Hidden;
+                navHeader.Visibility = Visibility.Hidden;
+                isMenu--;
+                Application.Current.Properties["counter"] = isMenu;
             }
             else if (navFrame.CanGoBack == true)
             {
                 navFrame.GoBack();
+                isMenu--;
+                Application.Current.Properties["counter"] = isMenu;
             }
 
             
@@ -96,9 +105,12 @@ namespace FingerFoodApp
 
         private void Menu_Clicked(object sender, RoutedEventArgs e)
         {
-            // Need to tweak this with the Customer's current total
-            navHeader.Visibility = Visibility.Hidden;
-            navFrame.Navigate(new Uri("MainMenu.xaml", UriKind.Relative));
+            while (navFrame.CanGoBack == true)
+            {
+                navFrame.GoBack();
+                navHeader.Visibility = Visibility.Hidden;
+                Application.Current.Properties["counter"] = 0;
+            }
         }
 
         private void Current_Cost_Click(object sender, RoutedEventArgs e)

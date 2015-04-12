@@ -26,7 +26,9 @@ namespace FingerFoodApp
         {
             InitializeComponent();
             ((FirstWindow)System.Windows.Application.Current.MainWindow).navHeader.Visibility = Visibility.Visible;
-            Application.Current.Properties["isList"] = true;
+            int isMenu = (int)Application.Current.Properties["counter"];
+            isMenu++;
+            Application.Current.Properties["counter"] = isMenu;
         }
 
         private void Simple_Simon_Clicked(object sender, RoutedEventArgs e)
