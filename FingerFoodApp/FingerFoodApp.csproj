@@ -365,7 +365,13 @@
     <Resource Include="exampleDinerTable2.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Cash Register Cha Ching-SoundBible.com-184076484%281%29.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="flyby-Conor-1500306612.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Gag-SoundBible.com-902499121.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

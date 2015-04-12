@@ -39,12 +39,24 @@
             <StackPanel x:Name="orderList" HorizontalAlignment="Left" Height="244" Margin="10,120,0,0" VerticalAlignment="Top" Width="355"/>
             <TextBlock x:Name="gstBox" HorizontalAlignment="Left" Height="28" Margin="155,364,0,0" TextWrapping="Wrap" Text="+GST (5%)" VerticalAlignment="Top" Width="164" FontSize="14"/>
             <TextBlock x:Name="totalBox" HorizontalAlignment="Left" Height="41" Margin="155,387,0,0" TextWrapping="Wrap" Text="TOTAL: " VerticalAlignment="Top" Width="177" FontSize="18" FontWeight="Bold"/>
-            <Button x:Name="OrderButton" Content="Send Order" HorizontalAlignment="Left" Height="41" Margin="46,433,0,0" VerticalAlignment="Top" Width="256" BorderBrush="Black" Background="#FF00AC1F" BorderThickness="2" FontSize="20" Click="OrderButton_Click" FontWeight="Bold"/>
+            <Button x:Name="OrderButton" Content="Send Order" HorizontalAlignment="Left" Height="41" Margin="46,433,0,0" VerticalAlignment="Top" Width="256" BorderBrush="Black" Background="#FF00AC1F" BorderThickness="2" FontSize="20" Click="OrderButton_Click" FontWeight="Bold">
+            	<i:Interaction.Triggers>
+            		<i:EventTrigger EventName="Click">
+            			<ei:PlaySoundAction Volume="1" Source="Cash Register Cha Ching-SoundBible.com-184076484(1).wav"/>
+            		</i:EventTrigger>
+            	</i:Interaction.Triggers>
+            </Button>
             <Button x:Name="CancelButton" Content="Clear Cart" HorizontalAlignment="Left" Height="41" Margin="46,479,0,0" VerticalAlignment="Top" Width="256" BorderBrush="Black" Background="Red" BorderThickness="2" FontSize="20" Click="CancelButton_Click" FontWeight="Bold"/>
             <Canvas x:Name="Confirmation" HorizontalAlignment="Left" Height="130" Margin="0,498,0,0" VerticalAlignment="Top" Width="375" Visibility="Hidden">
                 <GroupBox Header="Are you sure?" Height="89" Canvas.Left="39" Canvas.Top="20" Width="278" FontSize="16">
                     <Grid HorizontalAlignment="Left" Height="49" Margin="0,6,0,0" VerticalAlignment="Top" Width="262">
-                        <Button Content="FEED ME!" HorizontalAlignment="Left" Height="42" VerticalAlignment="Top" Width="115" Background="#FF1D9E00" Margin="10,0,0,0" BorderBrush="Black" Click="Button_Click_2"/>
+                        <Button Content="FEED ME!" HorizontalAlignment="Left" Height="42" VerticalAlignment="Top" Width="115" Background="#FF1D9E00" Margin="10,0,0,0" BorderBrush="Black" Click="Button_Click_2">
+                        	<i:Interaction.Triggers>
+                        		<i:EventTrigger EventName="Click">
+                        			<ei:PlaySoundAction Volume="1" Source="Cash Register Cha Ching-SoundBible.com-184076484(1).wav"/>
+                        		</i:EventTrigger>
+                        	</i:Interaction.Triggers>
+                        </Button>
                         <Button Content="Nope" HorizontalAlignment="Left" Height="42" Margin="137,0,0,0" VerticalAlignment="Top" Width="115" Background="Red" BorderBrush="Black" Click="Button_Click_1"/>
                     </Grid>
 
