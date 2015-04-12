@@ -16,21 +16,21 @@
         <TextBlock HorizontalAlignment="Left" Height="93" Margin="179,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" FontFamily="Gill Sans MT" Padding="10" FontSize="16" TextAlignment="Center" Text="Chocolate Sundae with the cherry on top! Come have a try at it, even if it's not sunday!"/>
         <GroupBox Header="Customize" HorizontalAlignment="Left" Height="115" Margin="60,284,0,0" VerticalAlignment="Top" Width="256" FontSize="28" FontFamily="Freestyle Script">
             <StackPanel Margin="0,0,0,3">
-                <CheckBox x:Name="MustardBox">
+                <CheckBox x:Name="add_Peanuts">
                     <TextBlock Text="Peanuts" FontWeight="Normal" FontFamily="Segoe UI" FontSize="14"/>
                 </CheckBox>
-                <CheckBox x:Name="MustardBox_Copy">
+                <CheckBox x:Name="add_Marashino_Cherry">
                     <TextBlock FontWeight="Normal" FontFamily="Segoe UI" FontSize="14" Width="152"><Run Text="Marashino"/><Run Text=" "/><Run Text="Cherry"/></TextBlock>
                 </CheckBox>
-                <CheckBox x:Name="MustardBox_Copy1">
+                <CheckBox x:Name="add_Extra_Chocolate">
                     <TextBlock Text="Extra Chocolate" FontWeight="Normal" FontFamily="Segoe UI" FontSize="14"/>
                 </CheckBox>
-                <CheckBox x:Name="MustardBox_Copy2">
+                <CheckBox x:Name="add_Chocolate_Shavings">
                     <TextBlock Text="Chocolate Shavings" FontWeight="Normal" FontFamily="Segoe UI" FontSize="14"/>
                 </CheckBox>
             </StackPanel>
         </GroupBox>
-        <Button Content="Add to order" HorizontalAlignment="Left" Height="41" Margin="60,458,0,0" VerticalAlignment="Top" Width="256" BorderBrush="Black" Background="#FF00AC1F" BorderThickness="2" FontSize="20" Click="Button_Click"/>
+        <Button Content="Add to order" HorizontalAlignment="Left" Height="41" Margin="60,458,0,0" VerticalAlignment="Top" Width="256" BorderBrush="Black" Background="#FF00AC1F" BorderThickness="2" FontSize="20" Click="Add_To_Order_Click"/>
         <TextBlock x:Name="Choco_Sundae_Price" HorizontalAlignment="Left" Height="21" Margin="67,212,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="43" Background="Black" Foreground="White" FontSize="14"><Run Text=" "/><Run Text="$"/><Run Text="2"/><Run Text="."/><Run Text="4"/><Run Text="9"/></TextBlock>
 
     </Grid>
