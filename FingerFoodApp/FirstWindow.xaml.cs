@@ -64,7 +64,7 @@ namespace FingerFoodApp
 
             //this.getBackButton.Visibility = Visibility.Visible;
             decimal CurrentTotal = (decimal)Application.Current.Properties["CurrentTotal"];
-            Current_Cost.Content = "Current Total: $" + CurrentTotal.ToString();
+            Current_Cost.Content = "My Total: $" + CurrentTotal.ToString();
 
             gstBox.Text = "+GST (5%): $0.00";
 
@@ -150,7 +150,7 @@ namespace FingerFoodApp
             CurrentTotal = Math.Round(CurrentTotal, 2);
 
             Application.Current.Properties["CurrentTotal"] = CurrentTotal;
-            Current_Cost.Content = "Current Total: $" + CurrentTotal.ToString();
+            Current_Cost.Content = "My Total: $" + CurrentTotal.ToString();
             gstBox.Text = "+GST (5%): $0.00";
             totalBox.Text = "TOTAL: $0.00";
 
@@ -187,7 +187,7 @@ namespace FingerFoodApp
 
             var bc = new BrushConverter();
             Current_Cost.Background = (Brush)bc.ConvertFrom("#FFFF2121");
-            Current_Cost.Content = "Current Cost: $0.00";
+            Current_Cost.Content = "My Total: $0.00";
 
             OrderButton.Visibility = Visibility.Visible;
             CancelButton.Visibility = Visibility.Visible;

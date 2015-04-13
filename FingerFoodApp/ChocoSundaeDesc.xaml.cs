@@ -81,7 +81,7 @@ namespace FingerFoodApp
             ((FirstWindow)System.Windows.Application.Current.MainWindow).Receipt.Items.Add(orderOutput);
 
             Application.Current.Properties["CurrentTotal"] = CurrentTotal;
-            ((FirstWindow)System.Windows.Application.Current.MainWindow).Current_Cost.Content = "Current Total: $" + CurrentTotal.ToString();
+            ((FirstWindow)System.Windows.Application.Current.MainWindow).Current_Cost.Content = "My Total: $" + CurrentTotal.ToString();
 
             decimal GST = CurrentTotal * 0.05m;
             GST = Math.Round(GST, 2);
@@ -110,7 +110,7 @@ namespace FingerFoodApp
             CurrentTotal = Math.Round(CurrentTotal, 2);
 
             Application.Current.Properties["CurrentTotal"] = CurrentTotal;
-            ((FirstWindow)System.Windows.Application.Current.MainWindow).Current_Cost.Content = "Current Total: $" + CurrentTotal.ToString();
+            ((FirstWindow)System.Windows.Application.Current.MainWindow).Current_Cost.Content = "My Total: $" + CurrentTotal.ToString();
 
             decimal GST = CurrentTotal * 0.05m;
             GST = Math.Round(GST, 2);
