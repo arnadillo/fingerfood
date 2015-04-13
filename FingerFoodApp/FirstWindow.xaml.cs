@@ -14,7 +14,6 @@ using System.Windows.Media.Animation;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-
 namespace FingerFoodApp
 {
     /// <summary>
@@ -72,11 +71,9 @@ namespace FingerFoodApp
             totalBox.Text = "TOTAL: $0.00";
 
             Back_Home.Visibility = Visibility.Hidden;
+
             
         }
-
-        public Button getBackButton { get { return Back_Button; } }
-        
 
         private void Frame_Navigated(object sender, NavigationEventArgs e)
         {
