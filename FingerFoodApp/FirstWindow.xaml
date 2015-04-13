@@ -93,10 +93,7 @@
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
             </Button>
-            <ScrollViewer x:Name="receiptScroller" HorizontalAlignment="Left" Height="232" Margin="15,127,-26,0" VerticalAlignment="Top" Width="378">
-                <StackPanel x:Name="Receipt"/>
-            </ScrollViewer>
-            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="235" Margin="10,124,0,0" VerticalAlignment="Top" Width="337"/>
+            <ListBox x:Name="Receipt" Width="375" HorizontalAlignment="Left" Margin="0,125,-8,265"/>
             <TextBlock x:Name="fancyArrow"  HorizontalAlignment="Left" Height="27" Margin="185,-2,0,0" TextWrapping="Wrap" Text="&#9650;" VerticalAlignment="Top" Width="15" Background="#03E61818" Foreground="White" Padding="0" FontSize="18"/>
 
 

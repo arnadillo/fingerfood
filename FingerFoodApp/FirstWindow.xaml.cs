@@ -13,7 +13,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Media.Animation;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Threading.Tasks;
 
 
 namespace FingerFoodApp
@@ -134,7 +133,15 @@ namespace FingerFoodApp
 
         private void OrderButton_Click(object sender, RoutedEventArgs e)
         {
-            Confirmation.Visibility = Visibility.Visible;
+            decimal CurrentTotal = (decimal)Application.Current.Properties["CurrentTotal"];
+            if (CurrentTotal == 0)
+            {
+                MessageBox.Show("Please order items before sending!");
+            }
+            else
+            {
+                Confirmation.Visibility = Visibility.Visible;
+            }
         }
 
         private void CancelButton_Click(object sender, RoutedEventArgs e)
@@ -148,7 +155,7 @@ namespace FingerFoodApp
             gstBox.Text = "+GST (5%): $0.00";
             totalBox.Text = "TOTAL: $0.00";
 
-            Receipt.Children.Clear();
+            Receipt.Items.Clear();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)   //nope button
