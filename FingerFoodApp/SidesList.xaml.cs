@@ -20,6 +20,8 @@ namespace FingerFoodApp
     /// </summary>
     public partial class SidesList : Page
     {
+
+        Boolean mealBool = false;
         public SidesList()
         {
             InitializeComponent();
@@ -30,9 +32,21 @@ namespace FingerFoodApp
             Application.Current.Properties["counter"] = isMenu;
         }
 
+        public SidesList(Boolean meal)
+        {
+            InitializeComponent();
+            ((FirstWindow)System.Windows.Application.Current.MainWindow).navHeader.Visibility = Visibility.Visible;
+
+            int isMenu = (int)Application.Current.Properties["counter"];
+            isMenu++;
+            Application.Current.Properties["counter"] = isMenu;
+
+            mealBool = meal;
+        }
+
         private void Fries_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new FriesDesc());
+            this.NavigationService.Navigate(new FriesDesc(mealBool));
         }
 
         private void Poutine_Click(object sender, RoutedEventArgs e)

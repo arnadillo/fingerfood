@@ -42,6 +42,8 @@ namespace FingerFoodApp
             Application.Current.Properties["CurrentTotal"] = current;
             Application.Current.Properties["isList"] = false;
             Application.Current.Properties["orderList"] = orderList;
+            Application.Current.Properties["completeMeal"] = "";
+            Application.Current.Properties["mealTotal"] = current;
 
             int pageCounter = 0;
             Application.Current.Properties["counter"] = pageCounter;
@@ -69,7 +71,7 @@ namespace FingerFoodApp
 
             totalBox.Text = "TOTAL: $0.00";
 
-
+            Back_Home.Visibility = Visibility.Hidden;
             
         }
 
@@ -172,6 +174,43 @@ namespace FingerFoodApp
             CancelButton.Visibility = Visibility.Hidden;
             Confirmation.Visibility = Visibility.Hidden;
             sentCanvas.Visibility = Visibility.Visible;
+            Back_Home.Visibility = Visibility.Visible;
+        }
+
+        private void Back_Home_Click(object sender, RoutedEventArgs e)
+        {
+            while (navFrame.CanGoBack == true)
+            {
+                navFrame.GoBack();
+                navHeader.Visibility = Visibility.Hidden;
+                Application.Current.Properties["counter"] = 0;
+
+                
+            }
+
+            var bc = new BrushConverter();
+            Current_Cost.Background = (Brush)bc.ConvertFrom("#FFFF2121");
+            Current_Cost.Content = "Current Cost: $0.00";
+
+            OrderButton.Visibility = Visibility.Visible;
+            CancelButton.Visibility = Visibility.Visible;
+            Confirmation.Visibility = Visibility.Visible;
+            sentCanvas.Visibility = Visibility.Hidden;
+            Back_Home.Visibility = Visibility.Hidden;
+            Confirmation.Visibility = Visibility.Hidden;
+
+            gstBox.Text = "+GST (5%): $0.00";
+            totalBox.Text = "TOTAL: $0.00";
+
+            Receipt.Items.Clear();
+
+            Storyboard viewTotalSB = (Storyboard)FindResource("viewTotal_rev");
+            viewTotalSB.Begin(this);
+            viewTotalFlag = false;
+
+            Application.Current.Properties["CurrentTotal"] = 0.00m;
+            Application.Current.Properties["mealTotal"] = 0.00m;
+            Application.Current.Properties["orderList"] = null;
         }
 
     }

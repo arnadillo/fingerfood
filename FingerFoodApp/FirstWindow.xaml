@@ -29,7 +29,7 @@
         <Frame x:Name ="navFrame" HorizontalAlignment="Left" Height="624" VerticalAlignment="Top" Width="365" Navigated="Frame_Navigated" NavigationUIVisibility="Hidden"/>
 
         <Canvas x:Name="navHeader">
-            <Button x:Name="Menu_Button" Content="Menu" HorizontalAlignment="Left" Height="27" Margin="286,33,0,0" VerticalAlignment="Top" Width="61" BorderBrush="Red" Foreground="White" Background="Red" Click="Menu_Clicked"/>
+            <Button x:Name="Menu_Button" Content="Home" HorizontalAlignment="Left" Height="27" Margin="286,33,0,0" VerticalAlignment="Top" Width="61" BorderBrush="Red" Foreground="White" Background="Red" Click="Menu_Clicked"/>
             <Button x:Name="Back_Button" Content="&lt; Back" HorizontalAlignment="Left" Height="27" Margin="10,33,0,0" VerticalAlignment="Top" Width="61" Background="Red" Foreground="White" BorderBrush="Red" Click="Back_Clicked"/>
         </Canvas>
 
@@ -95,6 +95,8 @@
             </Button>
             <ListBox x:Name="Receipt" Width="375" HorizontalAlignment="Left" Margin="0,125,-8,265"/>
             <TextBlock x:Name="fancyArrow"  HorizontalAlignment="Left" Height="27" Margin="185,-2,0,0" TextWrapping="Wrap" Text="&#9650;" VerticalAlignment="Top" Width="15" Background="#03E61818" Foreground="White" Padding="0" FontSize="18"/>
+            <Button x:Name="Back_Home" Content="Back to Main Menu" HorizontalAlignment="Left" Height="41" Margin="46,558,0,0" VerticalAlignment="Top" Width="256" BorderBrush="Black" Background="#FF00AC1F" BorderThickness="2" FontSize="20" Click="Back_Home_Click" FontWeight="Bold"/>
+
 
 
         </Grid>

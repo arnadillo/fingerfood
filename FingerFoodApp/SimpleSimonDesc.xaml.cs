@@ -20,6 +20,9 @@ namespace FingerFoodApp
     /// </summary>
     public partial class SimpleSimonDesc : Page
     {
+
+        Boolean mealBool = false;
+
         public SimpleSimonDesc()
         {
             InitializeComponent();
@@ -32,6 +35,7 @@ namespace FingerFoodApp
 
         private void Add_To_Order_Click(object sender, RoutedEventArgs e)
         {
+            mealBool = false;
             decimal CurrentTotal = (decimal)Application.Current.Properties["CurrentTotal"];
             CurrentTotal += 1.99m;
             CurrentTotal = Math.Round(CurrentTotal, 2);
@@ -103,22 +107,6 @@ namespace FingerFoodApp
 
         }
 
-        private void MakeAMeal_Click(object sender, RoutedEventArgs e)
-        {
-            TextBlock testbox = new TextBlock();
-            Button remove = new Button();
-            remove.Content = "x";
-            remove.Click += Remove_Click;
-            remove.Height = 20;
-            remove.Width = 15;
-
-
-
-            ((FirstWindow)System.Windows.Application.Current.MainWindow).Receipt.Items.Add(remove);
-            //((FirstWindow)System.Windows.Application.Current.MainWindow).Receipt.Children.Add(remove);
-
-        }
-
         private void Remove_Click(object sender, RoutedEventArgs e)
         {
             int i = ((FirstWindow)System.Windows.Application.Current.MainWindow).Receipt.Items.IndexOf(((FirstWindow)System.Windows.Application.Current.MainWindow).Receipt.SelectedItem);
@@ -144,6 +132,47 @@ namespace FingerFoodApp
 
             ((FirstWindow)System.Windows.Application.Current.MainWindow).gstBox.Text = "+GST (5%): $" + GST;
             ((FirstWindow)System.Windows.Application.Current.MainWindow).totalBox.Text = "TOTAL: $" + ActualTotal;
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            mealBool = true;
+            Application.Current.Properties["completeMeal"] = "";
+            Application.Current.Properties["mealTotal"] = 0.00m;
+            Application.Current.Properties["completeMeal"] += "Meal Deal";
+            Application.Current.Properties["completeMeal"] += "\n\u2022 Simple Simon\t\t\t\t $1.99";
+
+            decimal mealTotal = (decimal)Application.Current.Properties["mealTotal"];
+            mealTotal += 1.99m;
+            Application.Current.Properties["mealTotal"] = mealTotal;
+
+            bool addCheddarCheese = add_Cheddar_Cheese.IsChecked.Value;
+            bool addKetchup = add_Ketchup.IsChecked.Value;
+            bool addMayo = add_Mayo.IsChecked.Value;
+            bool addMustard = add_Mustard.IsChecked.Value;
+            bool addRelish = add_Relish.IsChecked.Value;
+            bool addBacon = add_Bacon.IsChecked.Value;
+            bool addLettuce = add_Lettuce.IsChecked.Value;
+            bool addTomatoes = add_Tomatoes.IsChecked.Value;
+
+            bool[] verifyChecked = new bool[] { addCheddarCheese, addKetchup, addMayo, addMustard, addRelish, addBacon, addLettuce, addTomatoes };
+            string[] customStrings = new string[] { "\n\tAdd Cheese", "\n\tAdd Ketchup", "\n\tAdd Mayo", "\n\tAdd Mustard", "\n\tAdd Relish", "\n\tAdd Bacon", "\n\tAdd Lettuce", "\n\tAdd Tomatoes" };
+
+            for (int i = 0; i < 8; i++)
+            {
+                if (verifyChecked[i] == true)
+                {
+                    Application.Current.Properties["completeMeal"] += customStrings[i];
+                }
+
+                else
+                {
+                    continue;
+                }
+            }
+
+            this.NavigationService.Navigate(new SidesList(mealBool));
 
         }
     }

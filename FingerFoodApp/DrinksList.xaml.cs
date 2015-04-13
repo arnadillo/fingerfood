@@ -20,7 +20,7 @@ namespace FingerFoodApp
     /// </summary>
     public partial class DrinksList : Page
     {
-
+        Boolean mealBool = false;
         public DrinksList()
         {
             InitializeComponent();
@@ -32,9 +32,22 @@ namespace FingerFoodApp
 
         }
 
+        public DrinksList(Boolean meal)
+        {
+            InitializeComponent();
+            ((FirstWindow)System.Windows.Application.Current.MainWindow).navHeader.Visibility = Visibility.Visible;
+
+            int isMenu = (int)Application.Current.Properties["counter"];
+            isMenu++;
+            Application.Current.Properties["counter"] = isMenu;
+
+            mealBool = meal;
+        }
+
+
         private void Boppity_Pop_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new BoppityPopDesc());
+            this.NavigationService.Navigate(new BoppityPopDesc(mealBool));
         }
 
         private void Pop_McGee_Click(object sender, RoutedEventArgs e)
