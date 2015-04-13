@@ -53,7 +53,7 @@ namespace FingerFoodApp
             remove_button.Width = 50;
             remove_button.Background = Brushes.Red;
 
-            currentOrderList[3].Add("\n\u2022 Choco Sundae\t\t\t\t\t $2.49");
+            currentOrderList[3].Add("\n\u2022 Choco Sundae\t\t\t\t $2.49");
 
             TextBlock orderOutput = new TextBlock();
             orderOutput.FontWeight = FontWeights.Bold;

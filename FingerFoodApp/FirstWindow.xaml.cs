@@ -210,7 +210,7 @@ namespace FingerFoodApp
 
             Application.Current.Properties["CurrentTotal"] = 0.00m;
             Application.Current.Properties["mealTotal"] = 0.00m;
-            Application.Current.Properties["orderList"] = null;
+            //Application.Current.Properties["orderList"] = null;
         }
 
     }
